@@ -47,6 +47,7 @@ def deploy(src_dir, dest_dir, target_name, hidden=True):
     elif path.exists(dest_path):
         print('!! file or directory already exists: {}'.format(dest_path))
     else:
+        print('>> create new link: {}'.format(dest_path))
         os.symlink(src_path, dest_path)
 
 
