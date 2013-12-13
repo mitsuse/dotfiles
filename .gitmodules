@@ -1,3 +1,6 @@
 [submodule "tools/pyenv"]
 	path = tools/pyenv
 	url = git@github.com:mitsuse/pyenv.git
+[submodule "tools/pyenv-plugins/virtualenv"]
+	path = tools/pyenv-plugins/virtualenv
+	url = https://github.com/yyuu/pyenv-virtualenv.git
