@@ -44,6 +44,8 @@ def deploy(src_dir, dest_dir, target_name, hidden=True):
     if path.islink(dest_path):
         if path.realpath(dest_path) != src_path:
             print('!! you have link to another path: {}'.format(dest_path))
+        else:
+            print('** you already have link: {}'.format(dest_path))
     elif path.exists(dest_path):
         print('!! file or directory already exists: {}'.format(dest_path))
     else:
