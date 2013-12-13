@@ -10,6 +10,7 @@ def main(args):
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
+    enable_git_config(expand_path('config', 'git'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
 
 
@@ -20,6 +21,10 @@ def enable_zsh_config(config_dir, dest_dir):
 
 def enable_tmux_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'tmux.conf')
+
+
+def enable_git_config(config_dir, dest_dir):
+    deploy(config_dir, dest_dir, 'gitconfig')
 
 
 def enable_pyenv_plugins(plugin_dir, pyenv_dir):
