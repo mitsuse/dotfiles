@@ -22,16 +22,17 @@ def enable_tmux_config(config_dir, dest_dir):
 def deploy_config(config_dir, dest_dir, config_name):
     import os
     import platform
+    from os import path
     if platform.system() == 'Windows':
         file_name_template = '_{}'
     else:
         file_name_template = '.{}'
-    config_path = os.path.join(config_dir, config_name)
-    dest_path = os.path.join(dest_dir, file_name_template.format(config_name))
-    if os.path.islink(dest_path):
-        if os.path.realpath(dest_path) != config_path:
+    config_path = path.join(config_dir, config_name)
+    dest_path = path.join(dest_dir, file_name_template.format(config_name))
+    if path.islink(dest_path):
+        if path.realpath(dest_path) != config_path:
             print('** config file has been already linked: {}'.format(dest_path))
-    elif os.path.exists(dest_path):
+    elif path.exists(dest_path):
         print('!! file or directory already exists: {}'.format(dest_path))
     else:
         os.symlink(config_path, dest_path)
