@@ -47,14 +47,18 @@ def deploy(src_dir, dest_dir, target_name, hidden=True):
     src_path = path.join(src_dir, target_name)
     dest_path = path.join(dest_dir, file_name_template.format(target_name))
     if path.islink(dest_path):
-        if path.realpath(dest_path) != src_path:
-            print('!! you have link to another path: {}'.format(dest_path))
+        link_target_path = path.realpath(dest_path)
+        if link_target_path != src_path:
+            template = '!! you have link to another path: {} => {}'
+            print(template.format(dest_path, link_target_path))
         else:
-            print('** you already have link: {}'.format(dest_path))
+            template = '** you already have link: {} => {}'
+            print(template.format(dest_path, link_target_path))
     elif path.exists(dest_path):
         print('!! file or directory already exists: {}'.format(dest_path))
     else:
-        print('>> create new link: {}'.format(dest_path))
+        template = '>> create new link: {} => {}'
+        print(template.format(dest_path, src_path))
         os.symlink(src_path, dest_path)
 
 
