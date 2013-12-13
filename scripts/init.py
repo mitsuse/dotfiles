@@ -43,7 +43,7 @@ def deploy(src_dir, dest_dir, target_name, hidden=True):
     dest_path = path.join(dest_dir, file_name_template.format(target_name))
     if path.islink(dest_path):
         if path.realpath(dest_path) != src_path:
-            print('** config file has been already linked: {}'.format(dest_path))
+            print('** you have link to another path: {}'.format(dest_path))
     elif path.exists(dest_path):
         print('!! file or directory already exists: {}'.format(dest_path))
     else:
