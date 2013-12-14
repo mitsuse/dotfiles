@@ -12,6 +12,7 @@ def main(args):
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
     enable_git_config(expand_path('config', 'git'), args.dest)
     enable_vim_config(expand_path('config', 'vim'), args.dest)
+    enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
 
 
@@ -36,6 +37,10 @@ def enable_vim_config(config_dir, dest_dir):
         deploy(config_dir, dest_dir, config_name)
     deploy(config_dir, vim_config_dir, 'neobundle.vim', False)
     deploy(config_dir, vim_config_dir, 'templates', False)
+
+
+def enable_vimperator_config(config_dir, dest_dir):
+    deploy(config_dir, dest_dir, 'vimperatorrc')
 
 
 def enable_pyenv_plugins(plugin_dir, pyenv_dir):
