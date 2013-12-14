@@ -17,5 +17,6 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'mattn/sonictemplate-vim'
 NeoBundle 'spolu/dwm.vim'
+NeoBundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
