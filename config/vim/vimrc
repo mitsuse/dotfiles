@@ -1,6 +1,10 @@
 "" load each config file
 source $HOME/.neobundle.vimrc
-source $HOME/.keybinds.vimrc
+for config in split(glob("~/.*.vimrc"), "\n")
+    if config !~ expand("~/.neobundle.vimrc")
+        execute "source " . config
+    endif
+endfor
 
 "" Looks
 syntax on
