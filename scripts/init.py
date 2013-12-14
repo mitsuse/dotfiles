@@ -11,6 +11,7 @@ def main(args):
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
     enable_git_config(expand_path('config', 'git'), args.dest)
+    enable_vim_config(expand_path('config', 'vim'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
 
 
@@ -25,6 +26,16 @@ def enable_tmux_config(config_dir, dest_dir):
 
 def enable_git_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'gitconfig')
+
+
+def enable_vim_config(config_dir, dest_dir):
+    import os
+    from os import path
+    vim_config_dir = path.join(dest_dir, '.vim')
+    for config_name in filter(lambda p: p.endswith('vimrc'), os.listdir(config_dir)):
+        deploy(config_dir, dest_dir, config_name)
+    deploy(config_dir, vim_config_dir, 'neobundle.vim', False)
+    deploy(config_dir, vim_config_dir, 'templates', False)
 
 
 def enable_pyenv_plugins(plugin_dir, pyenv_dir):
@@ -46,6 +57,15 @@ def deploy(src_dir, dest_dir, target_name, hidden=True):
         file_name_template = '{}'
     src_path = path.join(src_dir, target_name)
     dest_path = path.join(dest_dir, file_name_template.format(target_name))
+    if not path.exists(dest_dir):
+        try:
+            os.makedirs(dest_dir)
+        except:
+            print('!! fail to create a directory: {}'.format(dest_dir))
+            return
+    elif not path.isdir(dest_dir):
+        print('!! file or directory already exists: {}'.format(dest_dir))
+        return
     if path.islink(dest_path):
         link_target_path = path.realpath(dest_path)
         if link_target_path != src_path:

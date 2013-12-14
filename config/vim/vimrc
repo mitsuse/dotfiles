@@ -1,0 +1,42 @@
+"" load each config file
+source $HOME/.neobundle.vimrc
+source $HOME/.keybinds.vimrc
+
+"" Looks
+syntax on
+colorscheme desert
+set number
+set ruler
+set hlsearch
+set wildmenu
+set cursorline
+
+if version >= 700
+   highlight CursorLine term=none cterm=none ctermbg=237 
+endif
+    
+"" Indentation
+set autoindent
+set smartindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set shiftround
+
+"" Search
+set history=100
+set ignorecase
+set smartcase
+set wrapscan
+
+"" Encoding
+set encoding=utf-8
+set fileencoding=utf-8
+
+"" No Backup
+set nobackup
+set nowritebackup
+
+"" Completion
+set completeopt=menuone

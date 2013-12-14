@@ -4,3 +4,6 @@
 [submodule "tools/pyenv-plugins/virtualenv"]
 	path = tools/pyenv-plugins/virtualenv
 	url = https://github.com/yyuu/pyenv-virtualenv.git
+[submodule "config/vim/neobundle.vim"]
+	path = config/vim/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
