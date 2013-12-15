@@ -8,17 +8,21 @@ def main(args):
     expand_path = lambda *p: path.join(localenv_dir, *p)
     pyenv_dir = expand_path('tools', 'pyenv')
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
+    rbenv_dir = expand_path('tools', 'rbenv')
+    rbenv_plugins_dir = expand_path('tools', 'rbenv-plugins')
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
     enable_git_config(expand_path('config', 'git'), args.dest)
     enable_vim_config(expand_path('config', 'vim'), args.dest)
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
+    enable_rbenv_plugins(rbenv_plugins_dir, rbenv_dir)
 
 
 def enable_zsh_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'zshrc')
     deploy(config_dir, dest_dir, 'zshrc_python')
+    deploy(config_dir, dest_dir, 'zshrc_ruby')
 
 
 def enable_tmux_config(config_dir, dest_dir):
@@ -47,6 +51,12 @@ def enable_pyenv_plugins(plugin_dir, pyenv_dir):
     import os
     dest_dir = os.path.join(pyenv_dir, 'plugins')
     deploy(plugin_dir, dest_dir, 'virtualenv', False)
+
+
+def enable_rbenv_plugins(plugin_dir, rbenv_dir):
+    import os
+    dest_dir = os.path.join(rbenv_dir, 'plugins')
+    deploy(plugin_dir, dest_dir, 'ruby-build', False)
 
 
 def deploy(src_dir, dest_dir, target_name, hidden=True):

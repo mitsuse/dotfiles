@@ -1,0 +1,3 @@
+export RBENV_ROOT=$HOME/localenv/tools/rbenv
+export PATH=$RBENV_ROOT/bin:$PATH
+eval "$(rbenv init -)"

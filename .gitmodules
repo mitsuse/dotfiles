@@ -7,3 +7,9 @@
 [submodule "config/vim/neobundle.vim"]
 	path = config/vim/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim.git
+[submodule "tools/rbenv"]
+	path = tools/rbenv
+	url = https://github.com/sstephenson/rbenv.git
+[submodule "tools/rbenv-plugins/ruby-build"]
+	path = tools/rbenv-plugins/ruby-build
+	url = https://github.com/sstephenson/ruby-build.git
