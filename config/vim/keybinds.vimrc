@@ -1,7 +1,6 @@
 "" standard vim commands
 nnoremap ;h :help<space>
 nnoremap ;t :tabnew<space>
-nnoremap ;n :noh<CR>
 nnoremap ;w :w
 nnoremap ;q :q
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
