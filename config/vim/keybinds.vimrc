@@ -4,6 +4,7 @@ nnoremap ;t :tabnew<space>
 nnoremap ;n :noh<CR>
 nnoremap ;w :w
 nnoremap ;q :q
+nmap <silent> <Esc><Esc> :nohlsearch<CR>
 
 "" unite
 nnoremap zn :UniteWithBufferDir -buffer-name=files file file/new<CR>
