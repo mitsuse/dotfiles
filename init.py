@@ -4,7 +4,7 @@
 
 def main(args):
     from os import path
-    localenv_dir = path.dirname(path.dirname(path.abspath(__file__)))
+    localenv_dir = path.dirname(path.abspath(__file__))
     expand_path = lambda *p: path.join(localenv_dir, *p)
     pyenv_dir = expand_path('tools', 'pyenv')
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
