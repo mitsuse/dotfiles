@@ -33,6 +33,7 @@ set history=100
 set ignorecase
 set smartcase
 set wrapscan
+set incsearch
 
 "" Encoding
 set encoding=utf-8
