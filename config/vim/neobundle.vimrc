@@ -18,5 +18,6 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'mattn/sonictemplate-vim'
 NeoBundle 'spolu/dwm.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ujishima/neco-look'
 
 filetype plugin indent on
