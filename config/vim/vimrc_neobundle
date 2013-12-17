@@ -19,5 +19,6 @@ NeoBundle 'mattn/sonictemplate-vim'
 NeoBundle 'spolu/dwm.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ujihisa/neco-look'
+NeoBundle 'kannokanno/unite-dwm'
 
 filetype plugin indent on
