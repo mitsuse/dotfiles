@@ -15,9 +15,7 @@ set hlsearch
 set wildmenu
 set cursorline
 
-if version >= 700
-   highlight CursorLine term=none cterm=none ctermbg=237 
-endif
+highlight CursorLine term=none cterm=none ctermbg=237 
     
 "" Indentation
 set autoindent
