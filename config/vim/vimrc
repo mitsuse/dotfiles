@@ -1,7 +1,7 @@
 "" load each config file
-source $HOME/.neobundle.vimrc
-for config in split(glob("~/.*.vimrc"), "\n")
-    if config !~ expand("~/.neobundle.vimrc")
+source $HOME/.vimrc_neobundle
+for config in split(glob("~/.vimrc_*"), "\n")
+    if config !~ expand("~/.vimrc_neobundle")
         execute "source " . config
     endif
 endfor
