@@ -1,2 +1,6 @@
+"" Hingting
+set hintchars=fjdksl
+hi Hint font-size:14px; font-family:Menlo; color: white; background-color: red; font-weight: bold;
+
 "" Evernote Clearly
 nnoremap ,ec :js __readable_by_evernote.__readable_by_evernote__launch(true);<CR>
