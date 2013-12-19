@@ -3,6 +3,10 @@ nnoremap zm :Unite dwm<CR>
 
 "" neocomplete
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#sources#dictionary#dictionaries = {
+\   'default': '',
+\   'tex': $HOME.'/.vim/dict/tex.dict',
+\ }
 
 "" sonic-template
 let g:sonictemplate_vim_template_dir = '$HOME/.vim/templates'
