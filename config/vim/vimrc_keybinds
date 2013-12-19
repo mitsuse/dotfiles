@@ -3,6 +3,7 @@ nnoremap ;h :help<space>
 nnoremap ;t :tabnew<space>
 nnoremap ;w :w
 nnoremap ;q :q
+nnoremap <C-a> :set spell!<CR>
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
 
 "" unite
