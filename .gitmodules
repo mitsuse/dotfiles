@@ -13,3 +13,6 @@
 [submodule "tools/rbenv-plugins/ruby-build"]
 	path = tools/rbenv-plugins/ruby-build
 	url = https://github.com/sstephenson/ruby-build.git
+[submodule "tools/vimperator-plugins"]
+	path = tools/vimperator-plugins
+	url = https://github.com/vimpr/vimperator-plugins.git
