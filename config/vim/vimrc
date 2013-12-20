@@ -15,7 +15,8 @@ set hlsearch
 set wildmenu
 set cursorline
 
-highlight CursorLine term=none cterm=none ctermbg=237 
+"" Color
+highlight CursorLine term=none ctermfg=none ctermbg=237
     
 "" Indentation
 set autoindent
