@@ -17,6 +17,7 @@ set cursorline
 
 "" Color
 highlight CursorLine term=none ctermfg=none ctermbg=237
+highlight Comment term=none ctermfg=242 ctermbg=none
     
 "" Indentation
 set autoindent
