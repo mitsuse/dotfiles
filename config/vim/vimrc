@@ -45,3 +45,6 @@ set nowritebackup
 
 "" Completion
 set completeopt=menuone
+
+"" the filetype of *.tex file
+let g:tex_flavor = 'latex'
