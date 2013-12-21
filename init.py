@@ -38,6 +38,7 @@ def enable_vim_config(config_dir, dest_dir):
     from os import path
     vim_config_dir = path.join(dest_dir, '.vim')
     vimrc_filter = lambda p: p.startswith('vimrc_')
+    deploy(config_dir, dest_dir, 'vimrc')
     for config_name in filter(vimrc_filter, os.listdir(config_dir)):
         deploy(config_dir, dest_dir, config_name)
     deploy(config_dir, vim_config_dir, 'neobundle.vim', False)
