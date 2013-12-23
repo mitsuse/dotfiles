@@ -12,6 +12,7 @@ NeoBundle 'Shougo/vimproc', {'build': {
             \ 'unix': 'make -f make_unix.mak'}}
 
 "" Plugins
+NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
