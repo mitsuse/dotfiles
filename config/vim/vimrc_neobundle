@@ -23,5 +23,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ujihisa/neco-look'
 NeoBundle 'kannokanno/unite-dwm'
 NeoBundle 'guns/xterm-color-table.vim'
+NeoBundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
