@@ -24,5 +24,6 @@ NeoBundle 'ujihisa/neco-look'
 NeoBundle 'kannokanno/unite-dwm'
 NeoBundle 'guns/xterm-color-table.vim'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Yggdroot/indentLine'
 
 filetype plugin indent on
