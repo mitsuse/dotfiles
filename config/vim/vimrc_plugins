@@ -20,3 +20,6 @@ let g:sonictemplate_vim_template_dir = '$HOME/.vim/templates'
 autocmd FileType python setlocal completeopt-=preview
 let g:jedi#show_call_signatures = "1"
 let g:jedi#popup_on_dot = 0
+
+"" indentLine
+autocmd FileType tex set conceallevel=0
