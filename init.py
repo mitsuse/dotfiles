@@ -15,8 +15,8 @@ def main(args):
     enable_git_config(expand_path('config', 'git'), args.dest)
     enable_vim_config(expand_path('config', 'vim'), args.dest)
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
-    enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
-    enable_rbenv_plugins(rbenv_plugins_dir, rbenv_dir)
+    # enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
+    # enable_rbenv_plugins(rbenv_plugins_dir, rbenv_dir)
 
 
 def enable_zsh_config(config_dir, dest_dir):
