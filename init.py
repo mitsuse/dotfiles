@@ -17,6 +17,11 @@ def main(args):
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
     # enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
     # enable_rbenv_plugins(rbenv_plugins_dir, rbenv_dir)
+    enable_readline_config(expand_path('config', 'readline'), args.dest)
+
+
+def enable_readline_config(config_dir, dest_dir):
+    deploy(config_dir, dest_dir, 'inputrc')
 
 
 def enable_zsh_config(config_dir, dest_dir):
