@@ -19,7 +19,6 @@ export EDITOR=vim
 
 # misc
 alias sudo='sudo '
-alias ranger='pyenv exec ranger'
 export PATH=$HOME/bin:$HOME/localenv/scripts:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
