@@ -26,6 +26,7 @@ def enable_readline_config(config_dir, dest_dir):
 def enable_zsh_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'zshrc')
     deploy(config_dir, dest_dir, 'zshrc_python')
+    deploy(config_dir, dest_dir, 'zshrc_go')
 
 
 def enable_tmux_config(config_dir, dest_dir):
