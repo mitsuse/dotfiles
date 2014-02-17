@@ -6,4 +6,4 @@ hi Hint font-size:14px; font-family:Menlo; color: white; background-color: red; 
 nnoremap ,ec :js __readable_by_evernote.__readable_by_evernote__launch(true);<CR>
 
 "" Format the title and the url to tweet with #bookmark tag
-nnoremap ys :javascript util.copyToClipboard('#bookmark ' + buffer.title + ' ' + buffer.URL);<CR>
+nnoremap ys :js util.copyToClipboard('#bookmark ' + buffer.title + ' ' + buffer.URL);<CR>
