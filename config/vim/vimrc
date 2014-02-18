@@ -19,7 +19,7 @@ set cursorline
 highlight CursorLine term=none cterm=none ctermfg=none ctermbg=240
 highlight CursorLineNr term=none cterm=none ctermfg=252 ctermbg=240
 highlight LineNr term=none cterm=none ctermfg=244 ctermbg=none
-highlight Comment term=none ctermfg=240 ctermbg=none
+highlight Comment term=none ctermfg=104 ctermbg=none
 highlight Search term=none ctermfg=147 ctermbg=62
     
 "" Indentation
