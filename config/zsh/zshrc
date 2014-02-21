@@ -19,7 +19,7 @@ export EDITOR=vim
 
 # misc
 alias sudo='sudo '
-alias rm='trash-put'
+alias tp='pyenv exec trash-put'
 export PATH=$HOME/bin:$HOME/localenv/scripts:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
