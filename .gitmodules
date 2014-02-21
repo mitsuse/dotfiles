@@ -7,6 +7,3 @@
 [submodule "tools/pyenv-plugins/virtualenv"]
 	path = tools/pyenv-plugins/virtualenv
 	url = https://github.com/yyuu/pyenv-virtualenv.git
-[submodule "tools/linuxbrew"]
-	path = tools/linuxbrew
-	url = https://github.com/Homebrew/linuxbrew.git
