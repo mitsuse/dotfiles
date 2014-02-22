@@ -26,5 +26,6 @@ NeoBundle 'guns/xterm-color-table.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'thinca/vim-quickrun'
 
 filetype plugin indent on
