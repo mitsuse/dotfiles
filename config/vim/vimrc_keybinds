@@ -16,3 +16,6 @@ nnoremap zh :Unite file_mru<CR>
 
 "" sonictemplate-vim
 nnoremap ;g :Template<space>
+
+"" kobito
+nnoremap ;ko :Kobito<CR>
