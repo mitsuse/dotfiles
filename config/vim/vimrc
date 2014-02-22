@@ -44,6 +44,7 @@ set fileencoding=utf-8
 
 "" No Backup
 set nobackup
+set noswapfile
 set nowritebackup
 
 "" Completion
