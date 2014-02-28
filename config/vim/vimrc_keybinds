@@ -21,5 +21,5 @@ nnoremap ;g :Template<space>
 "" kobito
 nnoremap ;ko :Kobito<CR>
 
-""
+"" quickrun
 nnoremap ;r :QuickRun -outputter/buffer/split ":botright 8sp"<CR>
