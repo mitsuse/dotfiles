@@ -27,5 +27,7 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tshirtman/vim-cython'
+NeoBundle 'derekwyatt/vim-scala'
 
 filetype plugin indent on
