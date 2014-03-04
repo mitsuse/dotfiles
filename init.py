@@ -8,8 +8,6 @@ def main(args):
     expand_path = lambda *p: path.join(localenv_dir, *p)
     pyenv_dir = expand_path('tools', 'pyenv')
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
-    rbenv_dir = expand_path('tools', 'rbenv')
-    rbenv_plugins_dir = expand_path('tools', 'rbenv-plugins')
     luaenv_dir = expand_path('tools', 'luaenv')
     luaenv_plugins_dir = expand_path('tools', 'luaenv-plugins')
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
