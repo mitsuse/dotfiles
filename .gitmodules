@@ -7,3 +7,9 @@
 [submodule "tools/pyenv-plugins/virtualenv"]
 	path = tools/pyenv-plugins/virtualenv
 	url = https://github.com/yyuu/pyenv-virtualenv.git
+[submodule "tools/luaenv"]
+	path = tools/luaenv
+	url = https://github.com/cehoffman/luaenv.git
+[submodule "tools/luaenv-plugins/lua-build"]
+	path = tools/luaenv-plugins/lua-build
+	url = https://github.com/cehoffman/lua-build.git

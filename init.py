@@ -10,9 +10,12 @@ def main(args):
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
     rbenv_dir = expand_path('tools', 'rbenv')
     rbenv_plugins_dir = expand_path('tools', 'rbenv-plugins')
+    luaenv_dir = expand_path('tools', 'luaenv')
+    luaenv_plugins_dir = expand_path('tools', 'luaenv-plugins')
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
+    enable_luaenv_plugins(luaenv_plugins_dir, luaenv_dir)
     enable_git_config(expand_path('config', 'git'), args.dest)
     enable_vim_config(expand_path('config', 'vim'), args.dest)
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
@@ -26,6 +29,7 @@ def enable_readline_config(config_dir, dest_dir):
 def enable_zsh_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'zshrc')
     deploy(config_dir, dest_dir, 'zshrc_python')
+    deploy(config_dir, dest_dir, 'zshrc_lua')
     deploy(config_dir, dest_dir, 'zshrc_go')
 
 
@@ -37,6 +41,12 @@ def enable_pyenv_plugins(plugin_dir, pyenv_dir):
     import os
     dest_dir = os.path.join(pyenv_dir, 'plugins')
     deploy(plugin_dir, dest_dir, 'virtualenv', False)
+
+
+def enable_luaenv_plugins(plugin_dir, luaenv_dir):
+    import os
+    dest_dir = os.path.join(luaenv_dir, 'plugins')
+    deploy(plugin_dir, dest_dir, 'lua-build', False)
 
 
 def enable_git_config(config_dir, dest_dir):
