@@ -17,6 +17,7 @@ def main(args):
     enable_git_config(expand_path('config', 'git'), args.dest)
     enable_vim_config(expand_path('config', 'vim'), args.dest)
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
+    enable_eclipse_config(expand_path('config', 'eclipse'), args.dest)
     enable_readline_config(expand_path('config', 'readline'), args.dest)
 
 
@@ -67,6 +68,10 @@ def enable_vim_config(config_dir, dest_dir):
 
 def enable_vimperator_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'vimperatorrc')
+
+
+def enable_eclipse_config(config_dir, dest_dir):
+    deploy(config_dir, dest_dir, 'vrapperrc')
 
 
 def deploy(src_dir, dest_dir, target_name, hidden=True):
