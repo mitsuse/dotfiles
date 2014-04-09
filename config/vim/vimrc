@@ -47,5 +47,8 @@ set nobackup
 set noswapfile
 set nowritebackup
 
+"" Ignore CJK charactors on spell checking
+set spelllang+=cjk
+
 "" Completion
 set completeopt=menuone
