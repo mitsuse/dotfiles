@@ -1,3 +1,6 @@
+"" Save and quit Firefox
+nnoremap ;wq :wq
+
 "" Hingting
 set hintchars=fjdksl
 hi Hint font-size:14px; font-family:Menlo; color: white; background-color: red; font-weight: bold;
