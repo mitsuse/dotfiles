@@ -32,4 +32,9 @@ NeoBundle 'tshirtman/vim-cython'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'msmorgan/vim-flex'
 
+NeoBundle 'eclim', {
+\   'base': '~/.vim/bundle/',
+\   'type': 'nosync'
+\ }
+
 filetype plugin indent on
