@@ -30,7 +30,6 @@ def enable_zsh_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'zshrc_python')
     deploy(config_dir, dest_dir, 'zshrc_lua')
     deploy(config_dir, dest_dir, 'zshrc_go')
-    deploy(config_dir, dest_dir, 'zshrc_eclim')
 
 
 def enable_tmux_config(config_dir, dest_dir):

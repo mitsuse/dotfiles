@@ -1,3 +1,0 @@
-export ECLIPSE_VERSION="3.7.2"
-export ECLIPSE_HOME="$HOME/Applications/eclipse-${ECLIPSE_VERSION}"
-export PATH="${PATH}:$ECLIPSE_HOME"
