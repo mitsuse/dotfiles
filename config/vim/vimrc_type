@@ -1,5 +1,2 @@
-"" go
-au BufWritePre *.go Fmt
-
 "" tex
 let g:tex_flavor = 'latex'
