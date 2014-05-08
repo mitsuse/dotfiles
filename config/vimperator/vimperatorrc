@@ -1,3 +1,6 @@
+"" Hide the addressbar
+set gui=nonavigation
+
 "" Save and quit Firefox
 nnoremap ;wq :wq
 
