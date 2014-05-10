@@ -32,5 +32,6 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tshirtman/vim-cython'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'msmorgan/vim-flex'
+NeoBundle 'othree/html5.vim'
 
 filetype plugin indent on
