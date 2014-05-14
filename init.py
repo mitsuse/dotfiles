@@ -29,7 +29,6 @@ def enable_zsh_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'zshrc')
     deploy(config_dir, dest_dir, 'zshrc_python')
     deploy(config_dir, dest_dir, 'zshrc_ruby')
-    deploy(config_dir, dest_dir, 'zshrc_lua')
     deploy(config_dir, dest_dir, 'zshrc_go')
 
 
@@ -47,12 +46,6 @@ def enable_rbenv_plugins(plugin_dir, rbenv_dir):
     import os
     dest_dir = os.path.join(rbenv_dir, 'plugins')
     deploy(plugin_dir, dest_dir, 'ruby-build', False)
-
-
-def enable_luaenv_plugins(plugin_dir, luaenv_dir):
-    import os
-    dest_dir = os.path.join(luaenv_dir, 'plugins')
-    deploy(plugin_dir, dest_dir, 'lua-build', False)
 
 
 def enable_git_config(config_dir, dest_dir):
