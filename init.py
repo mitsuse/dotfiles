@@ -46,6 +46,7 @@ def enable_rbenv_plugins(plugin_dir, rbenv_dir):
     import os
     dest_dir = os.path.join(rbenv_dir, 'plugins')
     deploy(plugin_dir, dest_dir, 'ruby-build', False)
+    deploy(plugin_dir, dest_dir, 'bundler', False)
 
 
 def enable_git_config(config_dir, dest_dir):
