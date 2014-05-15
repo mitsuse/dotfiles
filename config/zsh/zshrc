@@ -7,6 +7,7 @@ setopt hist_reduce_blanks
 setopt share_history
 
 zshaddhistory() {
+    local line=${1%%$'\n'}
     local cmd=${line%% *}
     [[ "${cmd}" != "rm" ]]
 }
