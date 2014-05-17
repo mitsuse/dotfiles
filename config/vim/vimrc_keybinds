@@ -1,5 +1,6 @@
 "" standard vim commands
 nnoremap ;; q:
+nnoremap / q/
 nnoremap ;h :help<space>
 nnoremap ;t :tabnew<space>
 nnoremap ;w :w
