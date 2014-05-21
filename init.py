@@ -10,6 +10,7 @@ def main(args):
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
     rbenv_dir = expand_path('tools', 'rbenv')
     rbenv_plugins_dir = expand_path('tools', 'rbenv-plugins')
+    ipython_dest = expand_path(args.dest, '.ipython', 'profile_default')
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
@@ -19,6 +20,12 @@ def main(args):
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
     enable_eclipse_config(expand_path('config', 'eclipse'), args.dest)
     enable_readline_config(expand_path('config', 'readline'), args.dest)
+    enable_ipython_config(expand_path('config', 'ipython'), ipython_dest)
+
+
+def enable_ipython_config(config_dir, dest_dir):
+    deploy(config_dir, dest_dir, 'ipython_config.py', hidden=False)
+    deploy(config_dir, dest_dir, 'ipython_nbconvert_config.py', hidden=False)
 
 
 def enable_readline_config(config_dir, dest_dir):
