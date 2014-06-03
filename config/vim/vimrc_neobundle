@@ -14,6 +14,7 @@ NeoBundle 'Shougo/vimproc', {'build': {
 "" Plugins
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
