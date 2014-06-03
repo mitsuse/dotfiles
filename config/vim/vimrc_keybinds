@@ -14,8 +14,8 @@ nmap <silent> <Esc><Esc> :nohlsearch<CR>
 
 "" unite
 nnoremap zn :UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap zh :Unite file_mru<CR>
-nnoremap zo :Unite outline<CR>
+nnoremap zh :Unite -buffer-name=files file_mru<CR>
+nnoremap zo :Unite -buffer-name=outline outline<CR>
 
 "" sonictemplate-vim
 nnoremap ;g :Template<space>
