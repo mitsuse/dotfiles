@@ -14,6 +14,7 @@ nmap <silent> <Esc><Esc> :nohlsearch<CR>
 
 "" unite
 nnoremap zn :UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap zp :UniteWithProjectDir file -buffer-name=file file file/new<CR>
 nnoremap zh :Unite -buffer-name=files file_mru<CR>
 nnoremap zo :Unite -buffer-name=outline outline<CR>
 nnoremap zm :Unite -buffer-name=dwm dwm<CR>
