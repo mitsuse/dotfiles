@@ -28,3 +28,6 @@ let g:jedi#popup_on_dot = 0
 
 "" vim-go
 let g:go_snippet_engine = "neosnippet"
+
+"" vim-markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
