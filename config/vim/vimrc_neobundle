@@ -41,4 +41,10 @@ NeoBundle 'dag/vim2hs'
 " NeoBundle 'egaletmt/ghcmod.vim'
 " NeoBundle 'egaletmt/neco-ghc'
 
+" My plugins
+NeoBundle "neocomplete-ng", {
+\   "base" : $HOME . "/.vim/devel",
+\   "type" : "nosync",
+\}
+
 filetype plugin indent on
