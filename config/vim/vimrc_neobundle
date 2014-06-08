@@ -42,7 +42,7 @@ NeoBundle 'dag/vim2hs'
 " NeoBundle 'egaletmt/neco-ghc'
 
 " My plugins
-NeoBundle "neocomplete-ng", {
+NeoBundle "neocomplete-korat", {
 \   "base" : $HOME . "/.vim/devel",
 \   "type" : "nosync",
 \}
