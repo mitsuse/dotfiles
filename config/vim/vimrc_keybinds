@@ -29,4 +29,4 @@ nnoremap ;ko :Kobito<CR>
 nnoremap ;r :QuickRun -outputter/buffer/split ":botright 8sp"<CR>
 
 "" vim-go
-nnoremap <C-m>i :GoImport<space>
+nnoremap <C-x>m :GoImport<space>
