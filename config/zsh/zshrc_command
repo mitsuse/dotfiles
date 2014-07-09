@@ -1,0 +1,7 @@
+function tmux_attach() {
+    tmux attach 2>/dev/null
+    if [ "$?" -eq 1 ]; then 
+        tmux
+    fi
+}
+alias t="tmux_attach"

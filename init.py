@@ -37,6 +37,7 @@ def enable_zsh_config(config_dir, dest_dir):
     deploy(config_dir, dest_dir, 'zshrc_python')
     deploy(config_dir, dest_dir, 'zshrc_ruby')
     deploy(config_dir, dest_dir, 'zshrc_go')
+    deploy(config_dir, dest_dir, 'zshrc_command')
 
 
 def enable_tmux_config(config_dir, dest_dir):
