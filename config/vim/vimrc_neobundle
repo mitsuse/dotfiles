@@ -38,10 +38,4 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'msmorgan/vim-flex'
 NeoBundle 'othree/html5.vim'
 
-" My plugins
-NeoBundle "neocomplete-korat", {
-\   "base" : $HOME . "/.vim/devel",
-\   "type" : "nosync",
-\}
-
 filetype plugin indent on
