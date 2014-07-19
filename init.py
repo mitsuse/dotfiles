@@ -10,11 +10,14 @@ def main(args):
     pyenv_plugins_dir = expand_path('tools', 'pyenv-plugins')
     rbenv_dir = expand_path('tools', 'rbenv')
     rbenv_plugins_dir = expand_path('tools', 'rbenv-plugins')
+    ndenv_dir = expand_path('tools', 'ndenv')
+    ndenv_plugins_dir = expand_path('tools', 'ndenv-plugins')
     ipython_dest = expand_path(args.dest, '.ipython', 'profile_default')
     enable_zsh_config(expand_path('config', 'zsh'), args.dest)
     enable_tmux_config(expand_path('config', 'tmux'), args.dest)
     enable_pyenv_plugins(pyenv_plugins_dir, pyenv_dir)
     enable_rbenv_plugins(rbenv_plugins_dir, rbenv_dir)
+    enable_ndenv_plugins(ndenv_plugins_dir, ndenv_dir)
     enable_git_config(expand_path('config', 'git'), args.dest)
     enable_vim_config(expand_path('config', 'vim'), args.dest)
     enable_vimperator_config(expand_path('config', 'vimperator'), args.dest)
@@ -55,6 +58,12 @@ def enable_rbenv_plugins(plugin_dir, rbenv_dir):
     dest_dir = os.path.join(rbenv_dir, 'plugins')
     deploy(plugin_dir, dest_dir, 'ruby-build', False)
     deploy(plugin_dir, dest_dir, 'bundler', False)
+    
+
+def enable_ndenv_plugins(plugin_dir, ndenv_dir):
+    import os
+    dest_dir = os.path.join(ndenv_dir, 'plugins')
+    deploy(plugin_dir, dest_dir, 'node-build', False)
 
 
 def enable_git_config(config_dir, dest_dir):

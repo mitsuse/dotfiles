@@ -16,3 +16,9 @@
 [submodule "tools/rbenv-plugins/bundler"]
 	path = tools/rbenv-plugins/bundler
 	url = https://github.com/carsomyr/rbenv-bundler.git
+[submodule "tools/ndenv"]
+	path = tools/ndenv
+	url = https://github.com/riywo/ndenv.git
+[submodule "tools/ndenv-plugins/node-build"]
+	path = tools/ndenv-plugins/node-build
+	url = https://github.com/riywo/node-build.git
