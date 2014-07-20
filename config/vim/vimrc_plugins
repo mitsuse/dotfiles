@@ -25,6 +25,7 @@ let g:jedi#popup_on_dot = 0
 " let g:indentLine_char = '¦'
 " let g:indentLine_color_term = 238
 " autocmd FileType tex set conceallevel=0
+set list listchars=tab:\¦\ 
 
 "" vim-go
 let g:go_snippet_engine = "neosnippet"
