@@ -14,6 +14,7 @@ set ruler
 set hlsearch
 set wildmenu
 set cursorline
+set list
 
 "" Color
 highlight CursorLine term=none cterm=none ctermfg=none ctermbg=240
