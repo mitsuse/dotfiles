@@ -38,6 +38,6 @@ NeoBundle 'tshirtman/vim-cython'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'msmorgan/vim-flex'
 NeoBundle 'othree/html5.vim'
-NeoBundle 'mephux/vim-jsfmt'
+" NeoBundle 'mephux/vim-jsfmt'
 
 filetype plugin indent on
