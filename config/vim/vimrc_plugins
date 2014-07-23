@@ -34,6 +34,6 @@ let g:go_snippet_engine = "neosnippet"
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 "" vim-jsfmt
-" let g:js_fmt_fail_silently = 1
-" let g:js_fmt_autosave = 1
-" let g:js_fmt_command = "jsfmt"
+let g:js_fmt_fail_silently = 1
+let g:js_fmt_autosave = 1
+let g:js_fmt_command = "jsfmt"
