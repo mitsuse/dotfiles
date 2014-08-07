@@ -2,6 +2,7 @@
 
 work_dir=$1
 localenv_dir=$(dirname $0) 
+mapping_path=${localenv_dir}/mapping
 
 if [ $# -gt 1 ]; then
     echo "$(basename $0): Too mary arguments"
@@ -16,3 +17,9 @@ if [ ! -d "$work_dir" ]; then
     echo "$(basename $0): No such directory: $1"
     exit 1
 fi
+
+for line in $(cat $mapping_path)
+do
+    source_path=$(echo $line | awk -F ':' '{print $1}')
+    target_path=$(echo $line | awk -F ':' '{print $2}')
+done
