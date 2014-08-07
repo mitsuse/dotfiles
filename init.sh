@@ -22,4 +22,9 @@ for line in $(cat $mapping_path)
 do
     source_path=$(echo $line | awk -F ':' '{print $1}')
     target_path=$(echo $line | awk -F ':' '{print $2}')
+
+    # TODO: Show error messages easy to understand.
+    link="ln -s $localenv_dir/$source_path $work_dir/$target_path"
+    echo $link
+    $link
 done
