@@ -17,3 +17,11 @@ command! -nargs=0 KobitoClose call system("osascript -e 'tell application \"Kobi
 
 " focus on Kobito
 command! -nargs=0 KobitoFocus call system("osascript -e 'tell application \"Kobito\" to activate'")
+
+" format HTML.
+function! s:format_html(...)
+    :%s/<[^>]*>/\r&\r/g
+    :g/^ *$/d
+endfunction
+
+command! -nargs=0 FormatHtml call s:format_html()
