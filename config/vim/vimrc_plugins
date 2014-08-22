@@ -21,12 +21,6 @@ autocmd FileType python setlocal completeopt-=preview
 let g:jedi#show_call_signatures = "1"
 let g:jedi#popup_on_dot = 0
 
-"" indentLine
-" let g:indentLine_char = '¦'
-" let g:indentLine_color_term = 238
-" autocmd FileType tex set conceallevel=0
-set list listchars=tab:\¦\ 
-
 "" vim-go
 let g:go_snippet_engine = "neosnippet"
 
