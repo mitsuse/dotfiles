@@ -11,6 +11,12 @@ NeoBundle 'Shougo/vimproc', {'build': {
             \ 'mac': 'make -f make_mac.mak',
             \ 'unix': 'make -f make_unix.mak'}}
 
+"" My plugins
+NeoBundle 'bombay.vim', {
+            \ 'base': $HOME . '/localenv/config/vim/develop',
+            \ 'type': 'nosync'
+            \}
+
 "" Plugins
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'Shougo/unite.vim'

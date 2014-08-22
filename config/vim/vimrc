@@ -8,20 +8,13 @@ endfor
 
 "" Looks
 syntax on
-colorscheme desert
+colorscheme bombay
 set number
 set ruler
 set hlsearch
 set wildmenu
 set cursorline
 set list
-
-"" Color
-highlight CursorLine term=none cterm=none ctermfg=none ctermbg=240
-highlight CursorLineNr term=none cterm=none ctermfg=252 ctermbg=240
-highlight LineNr term=none cterm=none ctermfg=244 ctermbg=none
-highlight Comment term=none ctermfg=103 ctermbg=none
-highlight Search term=none ctermfg=147 ctermbg=62
     
 "" Indentation
 set autoindent

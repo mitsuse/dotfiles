@@ -22,3 +22,6 @@
 [submodule "tools/ndenv-plugins/node-build"]
 	path = tools/ndenv-plugins/node-build
 	url = https://github.com/riywo/node-build.git
+[submodule "config/vim/develop/bombay.vim"]
+	path = config/vim/develop/bombay.vim
+	url = git@github.com:mitsuse/bombay.vim.git
