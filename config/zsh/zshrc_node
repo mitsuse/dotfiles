@@ -1,3 +1,4 @@
 export NDENV_ROOT=$HOME/localenv/tools/ndenv
 export PATH=$NDENV_ROOT/bin:$NDENV_ROOT/shims:$PATH
 eval "$(ndenv init -)"
+compdef -d npm
