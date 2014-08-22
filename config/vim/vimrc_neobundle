@@ -36,5 +36,6 @@ NeoBundle 'clausreinke/typescript-tools'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mephux/vim-jsfmt'
 NeoBundle 'rhysd/vim-go-impl'
+NeoBundle 'vim-scripts/matchit.zip'
 
 filetype plugin indent on
