@@ -29,7 +29,7 @@ alias sudo='sudo '
 export PATH=$HOME/bin:$HOME/localenv/scripts:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
-compdef -d ssh git
+compdef -d ssh git hg
 setopt auto_cd
 
 # load more specific config files
