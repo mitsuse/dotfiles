@@ -14,3 +14,4 @@ nnoremap ,el :js __readable_by_evernote.launch();<CR>
 "" Format the title and the url to tweet with #bookmark tag or for markdown-formatted text
 nnoremap ys :js util.copyToClipboard('#bookmark ' + buffer.title + ' ' + buffer.URL);<CR>
 nnoremap ym :js util.copyToClipboard('[' + buffer.title + ']' + '(' + buffer.URL + ')');<CR>
+nnoremap yt :js util.copyToClipboard(buffer.title + ' ' + buffer.URL);<CR>
