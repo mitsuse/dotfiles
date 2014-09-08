@@ -34,3 +34,6 @@ let g:js_fmt_command = "jsfmt"
 
 "" emmet-vim
 let g:user_emmet_leader_key='<C-E>'
+
+"" fakeclip
+set clipboard=unnamed
