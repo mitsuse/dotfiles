@@ -7,6 +7,6 @@ function! s:source.gather_candidates(context)
     return []
 endfunction
 
-function! neocomplete#sources#{{}_name_}#define()
+function! neocomplete#sources#{{_name_}}#define()
   return s:source
 endfunction
