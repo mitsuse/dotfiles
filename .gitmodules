@@ -25,3 +25,6 @@
 [submodule "config/vim/develop/bombay.vim"]
 	path = config/vim/develop/bombay.vim
 	url = git@github.com:mitsuse/bombay.vim.git
+[submodule "config/vim/develop/neocomplete-prefix-vim"]
+	path = config/vim/develop/neocomplete-prefix-vim
+	url = git@github.com:mitsuse/neocomplete-prefix-vim.git

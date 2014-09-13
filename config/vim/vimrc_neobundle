@@ -17,6 +17,11 @@ NeoBundle 'bombay.vim', {
             \ 'type': 'nosync'
             \}
 
+NeoBundle 'neocomplete-prefix-vim', {
+            \ 'base': $HOME . '/localenv/config/vim/develop/',
+            \ 'type': 'nosync'
+            \}
+
 "" Plugins
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'Shougo/unite.vim'
