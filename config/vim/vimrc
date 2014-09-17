@@ -1,10 +1,9 @@
 "" load each config file
 source $HOME/.vimrc_neobundle
-for config in split(glob("~/.vimrc_*"), "\n")
-    if config !~ expand("~/.vimrc_neobundle")
-        execute "source " . config
-    endif
-endfor
+source $HOME/.vimrc_plugins
+source $HOME/.vimrc_commands
+source $HOME/.vimrc_keybinds
+source $HOME/.vimrc_type
 
 "" Looks
 syntax on
