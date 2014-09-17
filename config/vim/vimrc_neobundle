@@ -22,29 +22,41 @@ NeoBundle 'neocomplete-prefix-vim', {
             \ 'type': 'nosync'
             \}
 
-"" Plugins
-NeoBundle 'vim-jp/vital.vim'
+"" Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'kannokanno/unite-dwm'
+
+"" Development
+NeoBundle 'vim-jp/vital.vim'
+NeoBundle 'thinca/vim-quickrun'
+
+"" Completion
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vinarise.vim'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'mattn/sonictemplate-vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'spolu/dwm.vim'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'ujihisa/neco-look'
-NeoBundle 'kannokanno/unite-dwm'
-NeoBundle 'guns/xterm-color-table.vim'
+NeoBundle 'mattn/sonictemplate-vim'
+
+"" Edit
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'kana/vim-fakeclip'
+
+"" Window
+NeoBundle 'spolu/dwm.vim'
+NeoBundle 'Shougo/vinarise.vim'
+
+"" File type
 NeoBundle 'fatih/vim-go'
-NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mephux/vim-jsfmt'
 NeoBundle 'Shutnik/jshint2.vim'
-NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'vim-scripts/matchit.zip'
+
+"" Others
+NeoBundle 'guns/xterm-color-table.vim'
 
 filetype plugin indent on
