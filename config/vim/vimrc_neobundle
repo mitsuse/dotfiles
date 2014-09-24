@@ -17,8 +17,13 @@ NeoBundle 'bombay.vim', {
             \ 'type': 'nosync'
             \}
 
-NeoBundle 'neocomplete-prefix-vim', {
-            \ 'base': $HOME . '/localenv/config/vim/develop/',
+" NeoBundle 'neocomplete-prefix-vim', {
+"             \ 'base': $HOME . '/localenv/config/vim/develop/',
+"             \ 'type': 'nosync'
+"             \}
+
+NeoBundle 'vim-go', {
+            \ 'base': $HOME . '/projects/',
             \ 'type': 'nosync'
             \}
 
@@ -50,7 +55,7 @@ NeoBundle 'spolu/dwm.vim'
 NeoBundle 'Shougo/vinarise.vim'
 
 "" File type
-NeoBundle 'fatih/vim-go'
+" NeoBundle 'fatih/vim-go'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mephux/vim-jsfmt'
