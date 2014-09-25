@@ -13,6 +13,10 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
+let g:neosnippet#snippets_directory = [
+            \   '$HOME/.vim/snippets',
+            \]
+
 "" sonic-template
 let g:sonictemplate_vim_template_dir = '$HOME/.vim/templates'
 
@@ -23,7 +27,7 @@ let g:jedi#popup_on_dot = 0
 
 "" vim-go
 let g:go_fmt_command = "goimports"
-let g:go_snippet_engine = "neosnippet"
+let g:go_snippet_engine = ""
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 

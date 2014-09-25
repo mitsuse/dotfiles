@@ -80,6 +80,7 @@ def enable_vim_config(config_dir, dest_dir):
         deploy(config_dir, dest_dir, config_name)
     deploy(config_dir, vim_config_dir, 'neobundle.vim', False)
     deploy(config_dir, vim_config_dir, 'templates', False)
+    deploy(config_dir, vim_config_dir, 'snippets', False)
     deploy(config_dir, vim_config_dir, 'colors', False)
     deploy(config_dir, vim_config_dir, 'dict', False)
 
