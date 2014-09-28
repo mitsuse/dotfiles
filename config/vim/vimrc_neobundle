@@ -22,11 +22,6 @@ NeoBundle 'bombay.vim', {
 "             \ 'type': 'nosync'
 "             \}
 
-NeoBundle 'vim-go', {
-            \ 'base': $HOME . '/projects/',
-            \ 'type': 'nosync'
-            \}
-
 "" Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
@@ -55,7 +50,7 @@ NeoBundle 'spolu/dwm.vim'
 NeoBundle 'Shougo/vinarise.vim'
 
 "" File type
-" NeoBundle 'fatih/vim-go'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'rhsyd/vim-go-impl'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
