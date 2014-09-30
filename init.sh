@@ -60,17 +60,12 @@ create_link() {
 
         mkdir -p $(dirname ${abs_target_path})
 
-        if [ -d "${abs_target_path}" ]; then
+        if [ -d "${abs_target_path}" -o -f "${abs_target_path}" ]; then
             echo "Fail: ${abs_source_path} => ${abs_target_path}"
             continue
         else
-            ln -s "${abs_source_path}" "${abs_target_path}" 2>/dev/null
-        fi
-
-        if [ $? -eq 0 ]; then
             echo "Create: ${abs_source_path} => ${abs_target_path}"
-        else
-            echo "Fail: ${abs_source_path} => ${abs_target_path}"
+            ln -s "${abs_source_path}" "${abs_target_path}"
         fi
     done
 }
