@@ -1,6 +1,3 @@
-[submodule "config/vim/neobundle.vim"]
-	path = config/vim/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
 [submodule "tools/pyenv"]
 	path = tools/pyenv
 	url = https://github.com/yyuu/pyenv.git
@@ -28,3 +25,6 @@
 [submodule "config/vim/develop/neocomplete-prefix-vim"]
 	path = config/vim/develop/neocomplete-prefix-vim
 	url = git@github.com:mitsuse/neocomplete-prefix-vim.git
+[submodule "tools/neobundle.vim"]
+	path = tools/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git

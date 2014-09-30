@@ -5,7 +5,7 @@ config/vim/vimrc_neobundle:.vimrc_neobundle
 config/vim/vimrc_plugins:.vimrc_plugins
 config/vim/vimrc_type:.vimrc_type
 
-config/vim/neobundle.vim:.vim/neobundle.vim
+tools/neobundle.vim:.vim/neobundle.vim
 config/vim/colors:.vim/colors
 config/vim/develop:.vim/develop
 config/vim/dict:.vim/dict
