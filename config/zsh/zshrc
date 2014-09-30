@@ -35,8 +35,8 @@ setopt auto_cd
 # load more specific config files
 # for CONFIG_PATH in $HOME/.zshrc_*
 # load .zshrc_other first
-[ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
-for CONFIG_PATH in $(find $HOME -maxdepth 1 -name '.zshrc_*' ! -name '.zshrc_other')
+source $HOME/.zshrc_tools
+for CONFIG_PATH in $(find $HOME -maxdepth 1 -name '.zshrc_*' ! -name '.zshrc_tools')
 do
     [ -f $CONFIG_PATH ] && source $CONFIG_PATH
 done
