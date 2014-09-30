@@ -4,15 +4,6 @@
 [submodule "tools/pyenv-plugins/virtualenv"]
 	path = tools/pyenv-plugins/virtualenv
 	url = https://github.com/yyuu/pyenv-virtualenv.git
-[submodule "tools/rbenv"]
-	path = tools/rbenv
-	url = https://github.com/sstephenson/rbenv.git
-[submodule "tools/rbenv-plugins/ruby-build"]
-	path = tools/rbenv-plugins/ruby-build
-	url = https://github.com/sstephenson/ruby-build.git
-[submodule "tools/rbenv-plugins/bundler"]
-	path = tools/rbenv-plugins/bundler
-	url = https://github.com/carsomyr/rbenv-bundler.git
 [submodule "tools/ndenv"]
 	path = tools/ndenv
 	url = https://github.com/riywo/ndenv.git
