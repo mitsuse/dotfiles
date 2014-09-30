@@ -1,3 +1,6 @@
+# set the type to each environment variable.
+typeset -U path PATH
+
 # save command history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
