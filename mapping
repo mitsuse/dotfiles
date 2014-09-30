@@ -1,9 +1,9 @@
 config/vim/vimrc:.vimrc
-config/vim/vimrc_commands:.vimrc_commands
-config/vim/vimrc_keybinds:.vimrc_keybinds
-config/vim/vimrc_neobundle:.vimrc_neobundle
-config/vim/vimrc_plugins:.vimrc_plugins
-config/vim/vimrc_type:.vimrc_type
+config/vim/commands.vim:.commands.vim
+config/vim/keybinds.vim:.keybinds.vim
+config/vim/bundle.vim:.bundle.vim
+config/vim/plugins.vim:.plugins.vim
+config/vim/type.vim:.type.vim
 
 tools/neobundle.vim:.vim/neobundle.vim
 config/vim/colors:.vim/colors
