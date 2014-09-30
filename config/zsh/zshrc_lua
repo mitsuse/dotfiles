@@ -1,3 +1,0 @@
-export LUAENV_ROOT=$HOME/localenv/tools/luaenv
-export PATH=$LUAENV_ROOT/bin:$PATH
-eval "$(luaenv init -)"

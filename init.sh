@@ -62,6 +62,7 @@ create_link() {
 
         if [ -d "${abs_target_path}" ]; then
             echo "Fail: ${abs_source_path} => ${abs_target_path}"
+            continue
         else
             ln -s "${abs_source_path}" "${abs_target_path}" 2>/dev/null
         fi
