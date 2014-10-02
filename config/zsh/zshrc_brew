@@ -1,3 +1,0 @@
-export HOMEBREW_ROOT=$HOME/localenv/tools/linuxbrew
-export PATH=$HOMEBREW_ROOT/bin:$PATH
-export LD_LIBRARY_PATH=$HOMEBREW_ROOT/lib:$LD_LIBRARY_PATH
