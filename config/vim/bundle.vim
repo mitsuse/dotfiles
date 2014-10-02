@@ -13,12 +13,12 @@ NeoBundle 'Shougo/vimproc', {'build': {
 
 "" My plugins
 NeoBundle 'bombay.vim', {
-            \ 'base': $HOME . '/localenv/config/vim/develop',
+            \ 'base': $HOME . '/dotfiles/config/vim/develop',
             \ 'type': 'nosync'
             \}
 
 " NeoBundle 'neocomplete-prefix-vim', {
-"             \ 'base': $HOME . '/localenv/config/vim/develop/',
+"             \ 'base': $HOME . '/dotfiles/config/vim/develop/',
 "             \ 'type': 'nosync'
 "             \}
 
