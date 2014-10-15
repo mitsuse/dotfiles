@@ -54,7 +54,6 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'rhysd/vim-go-impl'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
-NeoBundle 'mephux/vim-jsfmt'
 NeoBundle 'Shutnik/jshint2.vim'
 
 "" Others

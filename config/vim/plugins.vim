@@ -34,11 +34,6 @@ let g:go_highlight_methods = 1
 "" vim-markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-"" vim-jsfmt
-let g:js_fmt_fail_silently = 1
-let g:js_fmt_autosave = 1
-let g:js_fmt_command = "jsfmt"
-
 "" jshint2
 let jshint2_read = 1
 let jshint2_save = 1
