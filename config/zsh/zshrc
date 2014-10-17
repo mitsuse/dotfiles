@@ -47,7 +47,7 @@ done
 # use a simple prompt
 autoload -U add-zsh-hook
 autoload -U vcs_info
-zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' enable git hg
 zstyle ':vcs_info:*' formats '(%s) [%b]'
 
 function update_vcs_info_msg() {
