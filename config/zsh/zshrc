@@ -45,7 +45,6 @@ do
 done
 
 # use a simple prompt
-[ -f $HOME/.zshrc_git ] && source $HOME/.zshrc_git
 autoload -U add-zsh-hook
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
