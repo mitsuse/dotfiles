@@ -21,6 +21,11 @@ NeoBundle 'bombay.vim', {
 "             \ 'base': $HOME . '/dotfiles/config/vim/develop/',
 "             \ 'type': 'nosync'
 "             \}
+"
+NeoBundle 'backlog-vim', {
+            \ 'base': $HOME . '/dotfiles/config/vim/develop',
+            \ 'type': 'nosync'
+            \}
 
 "" Unite
 NeoBundle 'Shougo/unite.vim'

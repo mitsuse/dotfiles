@@ -19,3 +19,6 @@
 [submodule "tools/neobundle.vim"]
 	path = tools/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim.git
+[submodule "config/vim/develop/backlog-vim"]
+	path = config/vim/develop/backlog-vim
+	url = git@github.com:mitsuse/backlog-vim.git
