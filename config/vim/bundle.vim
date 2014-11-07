@@ -17,6 +17,11 @@ NeoBundle 'bombay.vim', {
             \ 'type': 'nosync'
             \}
 
+NeoBundle 'neocomplete-ngram-vim', {
+            \ 'base': $HOME . '/dotfiles/config/vim/develop/',
+            \ 'type': 'nosync'
+            \}
+
 "" Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'

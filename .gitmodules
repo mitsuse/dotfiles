@@ -22,3 +22,6 @@
 [submodule "config/vim/develop/backlog-vim"]
 	path = config/vim/develop/backlog-vim
 	url = git@github.com:mitsuse/backlog-vim.git
+[submodule "config/vim/develop/neocomplete-ngram-vim"]
+	path = config/vim/develop/neocomplete-ngram-vim
+	url = git@github.com:mitsuse/neocomplete-ngram-vim.git
