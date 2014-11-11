@@ -38,11 +38,12 @@ setopt auto_cd
 # load more specific config files
 # for CONFIG_PATH in $HOME/.zshrc_*
 # load .zshrc_other first
-source $HOME/.zshrc_tools
-for CONFIG_PATH in $(find $HOME -maxdepth 1 -name '.zshrc_*' ! -name '.zshrc_tools')
-do
-    [ -f $CONFIG_PATH ] && source $CONFIG_PATH
-done
+[ -f $HOME/.zshrc_command ] && source $HOME/.zshrc_command
+[ -f $HOME/.zshrc_go ] && source $HOME/.zshrc_go
+[ -f $HOME/.zshrc_python ] && source $HOME/.zshrc_python
+[ -f $HOME/.zshrc_brew ] && source $HOME/.zshrc_brew
+[ -f $HOME/.zshrc_tools ] && source $HOME/.zshrc_tools
+[ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
 
 # use a simple prompt
 autoload -U add-zsh-hook
