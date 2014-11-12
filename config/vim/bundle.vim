@@ -54,7 +54,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'rhysd/vim-go-impl'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
-NeoBundle 'Shutnik/jshint2.vim'
+" NeoBundle 'Shutnik/jshint2.vim'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
