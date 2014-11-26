@@ -20,6 +20,7 @@ config/zsh/zshrc_command:.zshrc_command
 config/zsh/zshrc_go:.zshrc_go
 config/zsh/zshrc_node:.zshrc_node
 config/zsh/zshrc_python:.zshrc_python
+config/zsh/zshrc_ruby:.zshrc_ruby
 
 config/git/gitconfig:.gitconfig
 config/readline/inputrc:.inputrc
