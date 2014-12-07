@@ -53,6 +53,7 @@ NeoBundle 'Shougo/vinarise.vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'jdonaldson/vaxe'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
