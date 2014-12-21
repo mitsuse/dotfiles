@@ -21,6 +21,13 @@ NeoBundle 'neocomplete-ngram-vim', {
             \ 'base': $HOME . '/dotfiles/config/vim/develop/',
             \ 'type': 'nosync'
             \}
+"
+
+"" A frok of 'rhsyd/vim-grammarous'
+NeoBundle 'vim-grammarous', {
+            \ 'base': $HOME . '/dotfiles/config/vim/develop/',
+            \ 'type': 'nosync'
+            \}
 
 "" Unite
 NeoBundle 'Shougo/unite.vim'

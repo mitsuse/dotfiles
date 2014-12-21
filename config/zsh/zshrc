@@ -44,6 +44,7 @@ setopt auto_cd
 [ -f $HOME/.zshrc_ruby ] && source $HOME/.zshrc_ruby
 [ -f $HOME/.zshrc_brew ] && source $HOME/.zshrc_brew
 [ -f $HOME/.zshrc_tools ] && source $HOME/.zshrc_tools
+[ -f $HOME/.zshrc_osx ] && source $HOME/.zshrc_osx
 [ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
 
 # use a simple prompt

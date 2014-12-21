@@ -31,3 +31,6 @@
 [submodule "tools/rbenv-plugins/ruby-build"]
 	path = tools/rbenv-plugins/ruby-build
 	url = https://github.com/sstephenson/ruby-build.git
+[submodule "config/vim/develop/vim-grammarous"]
+	path = config/vim/develop/vim-grammarous
+	url = git@github.com:mitsuse/vim-grammarous.git
