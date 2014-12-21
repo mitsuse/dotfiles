@@ -29,7 +29,7 @@ export EDITOR=vim
 # misc
 alias sudo='sudo '
 # alias tp='pyenv exec trash-put'
-export PATH=$HOME/bin:$HOME/dotfiles/scripts:$PATH
+export PATH=$HOME/bin:$HOME/dotfiles/bin:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
 compdef -d ssh
