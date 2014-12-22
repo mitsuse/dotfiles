@@ -25,6 +25,5 @@ config/zsh/zshrc_osx:.zshrc_osx
 
 config/git/gitconfig:.gitconfig
 config/readline/inputrc:.inputrc
-config/tmux/tmux.conf:.tmux.conf
 config/vimperator/vimperatorrc:.vimperatorrc
 config/eclipse/vrapperrc:.vrapperrc
