@@ -17,7 +17,7 @@ NeoBundle 'bombay.vim', {
             \ 'type': 'nosync'
             \}
 
-NeoBundle 'neocomplete-ngram-vim', {
+NeoBundle 'neocomplete-kompl-vim', {
             \ 'base': $HOME . '/dotfiles/config/vim/develop/',
             \ 'type': 'nosync'
             \}
