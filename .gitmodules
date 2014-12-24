@@ -31,3 +31,6 @@
 [submodule "config/vim/develop/vim-grammarous"]
 	path = config/vim/develop/vim-grammarous
 	url = git@github.com:mitsuse/vim-grammarous.git
+[submodule "config/vim/develop/neocomplete-kompl-vim"]
+	path = config/vim/develop/neocomplete-kompl-vim
+	url = git@github.com:mitsuse/neocomplete-kompl-vim.git
