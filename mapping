@@ -22,6 +22,7 @@ config/zsh/zshrc_node:.zshrc_node
 config/zsh/zshrc_python:.zshrc_python
 config/zsh/zshrc_ruby:.zshrc_ruby
 config/zsh/zshrc_osx:.zshrc_osx
+config/zsh/zshrc_arch:.zshrc_arch
 
 config/git/gitconfig:.gitconfig
 config/readline/inputrc:.inputrc
