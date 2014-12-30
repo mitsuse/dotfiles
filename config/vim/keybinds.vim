@@ -23,9 +23,6 @@ nnoremap zm :Unite -buffer-name=dwm dwm<CR>
 "" sonictemplate-vim
 nnoremap ;g :Template<space>
 
-"" kobito
-nnoremap ;ko :Kobito<CR>
-
 "" quickrun
 nnoremap ;r :QuickRun -outputter/buffer/split ":botright 8sp"<CR>
 
