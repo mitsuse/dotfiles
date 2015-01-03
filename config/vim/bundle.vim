@@ -51,6 +51,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'kana/vim-fakeclip'
+" NeoBundle 'airblade/vim-gitgutter'
 
 "" Window
 NeoBundle 'spolu/dwm.vim'
