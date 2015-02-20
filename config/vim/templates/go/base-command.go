@@ -18,6 +18,9 @@ func initApp() *cli.App {
 	app.Version = ""
 	app.Usage = ""
 
+	app.Author = "Tomoya Kose (mitsuse)"
+	app.Email = "tomoya@mitsuse.jp"
+
 	app.Commands = []cli.Command{
 		newSubCommand(),
 	}
