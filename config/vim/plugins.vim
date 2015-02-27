@@ -31,6 +31,10 @@ let g:go_snippet_engine = ""
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 
+"" vim-jsfmt
+let g:js_fmt_command = "jsfmt"
+let g:js_fmt_autosave = 1
+
 "" vim-markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
