@@ -42,7 +42,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let jshint2_read = 1
 let jshint2_save = 1
 
-
 "" emmet-vim
 let g:user_emmet_leader_key='<C-E>'
 
