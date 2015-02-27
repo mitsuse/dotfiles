@@ -60,6 +60,7 @@ NeoBundle 'Shougo/vinarise.vim'
 
 "" File type
 NeoBundle 'fatih/vim-go'
+NeoBundle 'mephux/vim-jsfmt'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
 
