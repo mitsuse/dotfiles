@@ -49,7 +49,7 @@ NeoBundle 'mattn/sonictemplate-vim'
 "" Edit
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'townk/vim-autoclose'
+" NeoBundle 'townk/vim-autoclose'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'kana/vim-fakeclip'
 " NeoBundle 'airblade/vim-gitgutter'
