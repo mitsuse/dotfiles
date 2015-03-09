@@ -1,3 +1,5 @@
 export NDENV_ROOT=$HOME/dotfiles/tools/ndenv
 export PATH=$NDENV_ROOT/bin:$NDENV_ROOT/shims:$PATH
 eval "$(ndenv init - zsh)"
+
+compdef -d npm
