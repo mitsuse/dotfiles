@@ -28,3 +28,6 @@
 [submodule "config/vim/develop/neocomplete-kompl-vim"]
 	path = config/vim/develop/neocomplete-kompl-vim
 	url = git@github.com:mitsuse/neocomplete-kompl-vim.git
+[submodule "tools/sbt-install"]
+	path = tools/sbt-install
+	url = git@github.com:tototoshi/sbt-install.git

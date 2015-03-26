@@ -28,3 +28,5 @@ config/git/gitconfig:.gitconfig
 config/readline/inputrc:.inputrc
 config/vimperator/vimperatorrc:.vimperatorrc
 config/eclipse/vrapperrc:.vrapperrc
+
+tools/sbt-install/sbt-install:bin/sbt-install
