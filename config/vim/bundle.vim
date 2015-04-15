@@ -62,6 +62,7 @@ NeoBundle 'Shougo/vinarise.vim'
 NeoBundle 'fatih/vim-go'
 " NeoBundle 'mephux/vim-jsfmt'
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'ekalinin/Dockerfile.vim'
 
