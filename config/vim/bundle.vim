@@ -63,6 +63,7 @@ NeoBundle 'fatih/vim-go'
 " NeoBundle 'mephux/vim-jsfmt'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
