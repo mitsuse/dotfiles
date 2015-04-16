@@ -10,6 +10,7 @@ brew install go --with-cc-common
 brew install scala typesafe-activator
 brew install boot2docker
 brew install leveldb
+brew install libyaml
 brew install heroku-toolbelt
 brew install caskroom/cask/brew-cask
 brew install bullet-cmd
