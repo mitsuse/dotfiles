@@ -31,6 +31,3 @@
 [submodule "tools/sbt-install"]
 	path = tools/sbt-install
 	url = git@github.com:tototoshi/sbt-install.git
-[submodule "tools/asv"]
-	path = tools/asv
-	url = git@github.com:omnidan/asv.git
