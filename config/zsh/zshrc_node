@@ -1,5 +1,8 @@
 export NDENV_ROOT=$HOME/dotfiles/tools/ndenv
-export PATH=$NDENV_ROOT/bin:$NDENV_ROOT/shims:$PATH
+export ASV_ROOT=$HOME/dotfiles/tools/asv
+export PATH=$NDENV_ROOT/bin:$NDENV_ROOT/shims:$PATH:$ASV_ROOT/bin
 eval "$(ndenv init - zsh)"
 
 compdef -d npm
+
+export ASV_PREFIX=$HOME/tools
