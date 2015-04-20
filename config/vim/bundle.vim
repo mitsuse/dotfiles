@@ -38,6 +38,7 @@ NeoBundle 'kannokanno/unite-dwm'
 "" Development
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'scrooloose/syntastic'
 
 "" Completion
 NeoBundle 'Shougo/neocomplete.vim'

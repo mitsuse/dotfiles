@@ -47,3 +47,6 @@ let g:user_emmet_leader_key='<C-E>'
 
 "" fakeclip
 set clipboard=unnamed
+
+"" syntastic
+let g:syntastic_javascript_checkers = ['jshint']
