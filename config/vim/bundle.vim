@@ -66,6 +66,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'ekalinin/Dockerfile.vim'
 
 "" Others
