@@ -12,6 +12,7 @@ brew install boot2docker
 brew install leveldb
 brew install libyaml
 brew install heroku-toolbelt
+brew install jq
 brew install caskroom/cask/brew-cask
 brew install bullet-cmd
 
