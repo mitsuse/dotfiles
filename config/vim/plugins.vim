@@ -50,3 +50,4 @@ set clipboard=unnamed
 
 "" syntastic
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_scala_checkers = []
