@@ -5,6 +5,7 @@ brew tap mitsuse/bullet
 
 ## Installation
 brew install tmux zsh git
+brew install direnv
 brew install luajit
 brew install go --with-cc-common
 brew install scala typesafe-activator
