@@ -62,6 +62,7 @@ NeoBundle 'Shougo/vinarise.vim'
 "" File type
 NeoBundle 'fatih/vim-go'
 " NeoBundle 'mephux/vim-jsfmt'
+NeoBundle 'ahayman/vim-nodejs-complete'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
