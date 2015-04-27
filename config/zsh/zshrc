@@ -66,3 +66,5 @@ add-zsh-hook precmd update_vcs_info_msg
 autoload -U colors && colors
 PROMPT="%B%{${fg[yellow]}%}%~ %1(v|%v|)%b
 %{${reset_color}%}[${USER}%B@${HOST}%b]$ "
+
+eval "$(direnv hook zsh)"
