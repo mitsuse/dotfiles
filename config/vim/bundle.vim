@@ -4,8 +4,9 @@ filetype plugin indent off
 
 if has('vim_starting')
     set runtimepath+=~/.vim/neobundle.vim/
-    call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundle 'Shougo/vimproc', {'build': {
             \ 'mac': 'make -f make_mac.mak',
@@ -72,5 +73,7 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
+
+call neobundle#end()
 
 filetype plugin indent on
