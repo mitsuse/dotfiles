@@ -21,4 +21,5 @@ brew install bullet-cmd
 ## Installation (Cask)
 brew cask install firefox
 brew cask install google-chrome
+brew cask install java
 brew cask install virtualbox
