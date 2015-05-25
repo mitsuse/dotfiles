@@ -2,6 +2,7 @@
 
 ## taps
 brew tap mitsuse/bullet
+brew tap b4b4r07/gomi
 
 ## Installation
 brew install tmux zsh git
@@ -18,6 +19,7 @@ brew install jq
 brew install unrar
 brew install caskroom/cask/brew-cask
 brew install bullet-cmd
+brew install gomi
 
 ## Installation (Cask)
 brew cask install firefox
