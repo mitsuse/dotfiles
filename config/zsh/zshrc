@@ -38,13 +38,13 @@ setopt auto_cd
 # load more specific config files
 # for CONFIG_PATH in $HOME/.zshrc_*
 # load .zshrc_other first
+[ -f $HOME/.zshrc_tools ] && source $HOME/.zshrc_tools
 [ -f $HOME/.zshrc_command ] && source $HOME/.zshrc_command
 [ -f $HOME/.zshrc_go ] && source $HOME/.zshrc_go
 [ -f $HOME/.zshrc_python ] && source $HOME/.zshrc_python
 [ -f $HOME/.zshrc_ruby ] && source $HOME/.zshrc_ruby
 [ -f $HOME/.zshrc_node ] && source $HOME/.zshrc_node
 [ -f $HOME/.zshrc_brew ] && source $HOME/.zshrc_brew
-[ -f $HOME/.zshrc_tools ] && source $HOME/.zshrc_tools
 [ -f $HOME/.zshrc_osx ] && source $HOME/.zshrc_osx
 [ -f $HOME/.zshrc_arch ] && source $HOME/.zshrc_arch
 [ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
