@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## taps
+brew tap homebrew/binary
 brew tap mitsuse/bullet
 brew tap b4b4r07/gomi
 
@@ -20,6 +21,7 @@ brew install unrar
 brew install caskroom/cask/brew-cask
 brew install bullet-cmd
 brew install gomi
+brew install jad
 
 ## Installation (Cask)
 brew cask install firefox
