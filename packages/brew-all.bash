@@ -25,4 +25,5 @@ brew install gomi
 brew cask install firefox
 brew cask install google-chrome
 brew cask install java
+brew cask install evernote
 brew cask install virtualbox
