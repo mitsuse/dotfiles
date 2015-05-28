@@ -27,6 +27,7 @@ config/zsh/zshrc_arch:.zshrc_arch
 config/git/gitconfig:.gitconfig
 config/readline/inputrc:.inputrc
 config/vimperator/vimperatorrc:.vimperatorrc
+config/gomi/config.yaml:.gomi/config.yaml
 config/eclipse/vrapperrc:.vrapperrc
 
 tools/sbt-install/sbt-install:bin/sbt-install
