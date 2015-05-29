@@ -26,10 +26,6 @@ bindkey "^n" history-beginning-search-forward-end
 bindkey -v
 export EDITOR=vim
 
-# misc
-alias sudo='sudo '
-alias rm='gomi'
-# alias tp='pyenv exec trash-put'
 export PATH=$HOME/bin:$HOME/dotfiles/bin:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
@@ -38,6 +34,7 @@ setopt auto_cd
 
 # load more specific config files
 # for CONFIG_PATH in $HOME/.zshrc_*
+[ -f $HOME/.zshrc_alias ] && source $HOME/.zshrc_alias
 [ -f $HOME/.zshrc_tools ] && source $HOME/.zshrc_tools
 [ -f $HOME/.zshrc_command ] && source $HOME/.zshrc_command
 [ -f $HOME/.zshrc_go ] && source $HOME/.zshrc_go
