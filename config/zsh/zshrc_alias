@@ -1,3 +1,4 @@
 alias sudo='sudo '
+alias mkdir='mkdir -p '
 alias rm='gomi'
 # alias tp='pyenv exec trash-put'
