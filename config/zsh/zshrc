@@ -33,7 +33,7 @@ alias rm='gomi'
 export PATH=$HOME/bin:$HOME/dotfiles/bin:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
-compdef -d ssh
+compdef -d ssh java
 setopt auto_cd
 
 # load more specific config files
