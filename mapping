@@ -26,6 +26,7 @@ config/zsh/zshrc_osx:.zshrc_osx
 config/zsh/zshrc_arch:.zshrc_arch
 
 config/git/gitconfig:.gitconfig
+config/git/gitignore:.gitignore
 config/readline/inputrc:.inputrc
 config/vimperator/vimperatorrc:.vimperatorrc
 config/gomi/config.yaml:.gomi/config.yaml
