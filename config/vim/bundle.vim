@@ -41,11 +41,6 @@ NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'scrooloose/syntastic'
 
-NeoBundle 'eclim', {
-            \ 'base': expand('~/.vim/nosync/'),
-            \ 'type': 'nosync'
-            \}
-
 "" Completion
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
