@@ -10,6 +10,7 @@ brew install tmux zsh git
 brew install reattach-to-user-namespace
 brew install tree
 brew install direnv
+brew install peco
 brew install luajit
 brew install go --with-cc-common
 brew install scala typesafe-activator
