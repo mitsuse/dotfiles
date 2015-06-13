@@ -22,7 +22,6 @@ NeoBundle 'neocomplete-kompl-vim', {
             \ 'base': $HOME . '/dotfiles/config/vim/develop/',
             \ 'type': 'nosync'
             \}
-"
 
 "" A frok of 'rhsyd/vim-grammarous'
 NeoBundle 'vim-grammarous', {
