@@ -1,1 +1,8 @@
+# OS X
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IntelliJ
 .idea/
