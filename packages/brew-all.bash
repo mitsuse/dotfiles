@@ -7,6 +7,7 @@ brew tap b4b4r07/gomi
 
 ## Installation
 brew install tmux zsh git
+brew install vim --with-luajit
 brew install reattach-to-user-namespace
 brew install tree
 brew install direnv
