@@ -34,6 +34,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'kannokanno/unite-dwm'
+NeoBundle 'ujihisa/unite-locate'
 
 "" Development
 NeoBundle 'vim-jp/vital.vim'
