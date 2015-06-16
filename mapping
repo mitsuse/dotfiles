@@ -25,11 +25,14 @@ config/zsh/zshrc_ruby:.zshrc_ruby
 config/zsh/zshrc_osx:.zshrc_osx
 config/zsh/zshrc_arch:.zshrc_arch
 
+config/sbt/0.13/plugins/plugins.sbt:.sbt/0.13/plugins/plugins.sbt
+
 config/git/gitconfig:.gitconfig
 config/git/gitignore:.gitignore
 config/readline/inputrc:.inputrc
 config/vimperator/vimperatorrc:.vimperatorrc
 config/gomi/config.yaml:.gomi/config.yaml
 config/eclipse/vrapperrc:.vrapperrc
+config/ctags:.ctags
 
 tools/sbt-install/sbt-install:bin/sbt-install
