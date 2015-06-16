@@ -6,3 +6,6 @@ Thumbs.db
 
 # IntelliJ
 .idea/
+
+# Others
+.tags
