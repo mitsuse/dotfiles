@@ -25,6 +25,7 @@ brew install caskroom/cask/brew-cask
 brew install bullet-cmd
 brew install gomi
 brew install jad
+brew install hub
 
 ## Installation (Cask)
 brew cask install firefox
