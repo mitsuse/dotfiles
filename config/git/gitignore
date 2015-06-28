@@ -8,4 +8,5 @@ Thumbs.db
 .idea/
 
 # Others
+.envrc
 .tags
