@@ -27,6 +27,7 @@ brew install gomi
 brew install jad
 brew install hub
 brew install pt
+brew install nkf
 
 ## Installation (Cask)
 brew cask install firefox
