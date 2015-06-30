@@ -1,6 +1,12 @@
 "" unite
 let g:unite_enable_start_insert = 1
 
+if executable('pt')
+  let g:unite_source_grep_command = 'pt'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 "" neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#sources#dictionary#dictionaries = {

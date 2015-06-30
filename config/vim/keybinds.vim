@@ -20,6 +20,7 @@ nnoremap zt :Unite -buffer-name=tabs tab<CR>
 nnoremap zh :Unite -buffer-name=files file file_mru file/new locate<CR>
 nnoremap zo :Unite -buffer-name=outline outline<CR>
 nnoremap zm :Unite -buffer-name=dwm dwm<CR>
+nnoremap zg :Unite -buffer-name=grep grep:.<CR>
 
 "" sonictemplate-vim
 nnoremap ;g :Template<space>
