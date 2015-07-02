@@ -4,6 +4,7 @@
 
 [core]
 	excludesFile = ~/.gitignore
+	quotepath = false
 
 [alias]
     pm = !git branch --merged | grep -v '^\\*\\|develop\\|master' | xargs -n 1 -P 1 git branch -d
