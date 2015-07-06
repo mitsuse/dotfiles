@@ -1,6 +1,5 @@
 "" standard vim commands
 nnoremap ;; q:a
-nnoremap / q/a
 nnoremap ;h :help<space>
 nnoremap ;t :tabnew<space>
 nnoremap ;w :w
@@ -30,3 +29,8 @@ nnoremap ;r :QuickRun -outputter/buffer/split ":botright 8sp"<CR>
 
 "" vim-go
 nnoremap <C-x>m :GoImport<space>
+
+"" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)

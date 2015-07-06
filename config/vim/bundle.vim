@@ -55,6 +55,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'kana/vim-fakeclip'
 " NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'haya14busa/incsearch.vim'
 
 "" Window
 NeoBundle 'spolu/dwm.vim'
