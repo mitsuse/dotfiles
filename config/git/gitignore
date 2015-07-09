@@ -8,5 +8,6 @@ Thumbs.db
 .idea/
 
 # Others
+.gitconfig
 .envrc
 .tags
