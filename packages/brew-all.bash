@@ -28,6 +28,7 @@ brew install jad
 brew install hub
 brew install pt
 brew install nkf
+brew install gnu-sed
 
 ## Installation (Cask)
 brew cask install firefox
