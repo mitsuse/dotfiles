@@ -31,6 +31,7 @@ brew install pt
 brew install nkf
 brew install gnu-sed
 brew install license
+brew install graphviz
 
 ## Installation (Cask)
 brew cask install firefox
