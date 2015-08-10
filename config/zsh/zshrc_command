@@ -5,3 +5,14 @@ function tmux_attach() {
     fi
 }
 alias t="tmux_attach"
+
+function cd_ghq() {
+    local selected_path=$(ghq list -p | peco --query "$LBUFFER")
+    if [ -n "${selected_path}" ]; then
+        BUFFER="cd ${selected_path}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N cd_ghq
+bindkey '^]' cd_ghq

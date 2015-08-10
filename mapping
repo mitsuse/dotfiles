@@ -15,6 +15,7 @@ config/vim/templates:.vim/templates
 
 config/zsh/zshrc:.zshrc
 config/zsh/zshrc_alias:.zshrc_alias
+config/zsh/zshrc_env:.zshrc_env
 config/zsh/zshrc_tools:.zshrc_tools
 config/zsh/zshrc_brew:.zshrc_brew
 config/zsh/zshrc_command:.zshrc_command
