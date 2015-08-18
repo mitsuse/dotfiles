@@ -16,3 +16,9 @@ function cd_ghq() {
 }
 zle -N cd_ghq
 bindkey '^]' cd_ghq
+
+function fg_job() {
+    fg
+}
+zle -N fg_job
+bindkey '^z' fg_job
