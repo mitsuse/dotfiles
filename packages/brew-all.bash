@@ -42,3 +42,4 @@ brew cask install evernote
 brew cask install virtualbox
 brew cask install goofy
 brew cask install atom
+brew cask install gimp
