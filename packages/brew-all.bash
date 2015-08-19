@@ -33,6 +33,7 @@ brew install gnu-sed
 brew install license
 brew install graphviz
 brew install ghq
+brew install colordiff
 
 ## Installation (Cask)
 brew cask install firefox

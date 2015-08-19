@@ -3,4 +3,5 @@ alias mkdir='mkdir -p '
 alias rm='gomi'
 # alias tp='pyenv exec trash-put'
 alias ptpython='ptpython --vi'
+alias diff='colordiff'
 eval "$(hub alias -s)"
