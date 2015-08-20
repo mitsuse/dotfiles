@@ -34,6 +34,7 @@ brew install license
 brew install graphviz
 brew install ghq
 brew install colordiff
+brew install figlet
 
 ## Installation (Cask)
 brew cask install firefox
