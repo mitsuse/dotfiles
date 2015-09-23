@@ -39,7 +39,6 @@ brew install colordiff
 brew cask install firefox
 brew cask install google-chrome
 brew cask install java
-brew cask install evernote
 brew cask install virtualbox
 brew cask install goofy
 brew cask install gimp
