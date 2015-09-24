@@ -15,3 +15,11 @@ snippet bench
         ${2}
     }
     ${3}
+
+snippet recover
+    defer func () {
+        if p := recover(); p != nil {
+            ${1}
+        }
+    }
+    ${2}
