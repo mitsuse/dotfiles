@@ -35,6 +35,7 @@ brew install graphviz
 brew install ghq
 brew install colordiff
 brew install android-sdk android-platform-tools
+brew install figlet
 
 ## Installation (Cask)
 brew cask install firefox
