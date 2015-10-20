@@ -43,3 +43,4 @@ brew cask install google-chrome
 brew cask install java
 brew cask install goofy
 brew cask install gimp
+brew cask install atom
