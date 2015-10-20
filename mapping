@@ -30,6 +30,7 @@ config/sbt/0.13/plugins/plugins.sbt:.sbt/0.13/plugins/plugins.sbt
 config/sbt/0.13/plugins/plugins.sbt:.sbt/0.13/build.sbt
 
 config/atom/styles.less:.atom/styles.less
+config/atom/init.js:.atom/init.js
 
 config/git/gitconfig:.gitconfig
 config/git/gitignore:.gitignore
