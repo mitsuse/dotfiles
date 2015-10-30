@@ -72,6 +72,7 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'Quramy/vison'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
