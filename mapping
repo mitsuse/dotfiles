@@ -13,6 +13,8 @@ config/vim/snippets:.vim/snippets
 config/vim/syntax:.vim/syntax
 config/vim/templates:.vim/templates
 
+config/pyvim/pyvimrc:.pyvimrc
+
 config/zsh/zshrc:.zshrc
 config/zsh/zshrc_alias:.zshrc_alias
 config/zsh/zshrc_env:.zshrc_env
