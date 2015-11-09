@@ -33,7 +33,7 @@ export EDITOR=vim
 export PATH=$HOME/bin:$HOME/dotfiles/bin:$PATH
 autoload -U compinit && compinit
 autoload -U predict-on && predict-on
-compdef -d ssh java
+compdef -d ssh java adb
 setopt auto_cd
 
 # load more specific config files
