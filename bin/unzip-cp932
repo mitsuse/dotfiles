@@ -6,6 +6,9 @@ def main(context):
     from zipfile import ZipFile
 
     with ZipFile(context.archive) as f:
+        if context.password is not None:
+            f.setpassword(context.password.encode())
+
         for info in f.infolist():
             extract(f, info.filename, context.dest)
 
@@ -44,6 +47,14 @@ def parse_args(args):
         type=str,
         required=True,
         help='the path of a ZIP file',
+    )
+
+    parser.add_argument(
+        '--password',
+        '-p',
+        type=str,
+        required=False,
+        help='the password of files to be extracted',
     )
 
     parser.add_argument(
