@@ -1,0 +1,2 @@
+export HTTP_CODE_ROOT=$HOME/dotfiles/tools/http_code
+export PATH=$HTTP_CODE_ROOT/bin:$PATH
