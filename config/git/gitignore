@@ -16,3 +16,4 @@ npm-debug.log
 .tags
 _local
 .ensime
+.python-version
