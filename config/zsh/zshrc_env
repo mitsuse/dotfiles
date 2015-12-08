@@ -1,1 +1,2 @@
 export GHQROOT=$HOME/projects
+export GITHUB_ROOT=$GHQROOT/src/github.com/mitsuse
