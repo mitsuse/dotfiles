@@ -1,12 +1,10 @@
 #!/bin/bash
 
-## taps
 brew tap homebrew/binary
 brew tap mitsuse/bullet
 brew tap b4b4r07/gomi
 brew tap tcnksm/license
 
-## Installation
 brew install tmux zsh git
 brew install vim --with-luajit
 brew install reattach-to-user-namespace
