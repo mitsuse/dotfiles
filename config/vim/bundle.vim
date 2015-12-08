@@ -14,18 +14,18 @@ NeoBundle 'Shougo/vimproc', {'build': {
 
 "" My plugins
 NeoBundle 'bombay.vim', {
-            \ 'base': $HOME . '/dotfiles/config/vim/develop',
+            \ 'base': $GITHUB_ROOT . '/dotfiles/config/vim/develop',
             \ 'type': 'nosync'
             \}
 
 NeoBundle 'neocomplete-kompl-vim', {
-            \ 'base': $HOME . '/dotfiles/config/vim/develop/',
+            \ 'base': $GITHUB_ROOT . '/dotfiles/config/vim/develop/',
             \ 'type': 'nosync'
             \}
 
 "" A frok of 'rhsyd/vim-grammarous'
 NeoBundle 'vim-grammarous', {
-            \ 'base': $HOME . '/dotfiles/config/vim/develop/',
+            \ 'base': $GITHUB_ROOT . '/dotfiles/config/vim/develop/',
             \ 'type': 'nosync'
             \}
 
