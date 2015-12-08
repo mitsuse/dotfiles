@@ -46,3 +46,4 @@ brew cask install gimp
 brew cask install atom
 brew cask install music-manager
 brew cask install appcleaner
+brew cask install karabiner
