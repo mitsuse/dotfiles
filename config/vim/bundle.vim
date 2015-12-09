@@ -64,6 +64,10 @@ NeoBundle 'keith/swift.vim'
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
 
+if filereadable(expand('$HOME/.bundle_dev.vim'))
+    source $HOME/.bundle_dev.vim
+endif
+
 call neobundle#end()
 
 filetype plugin indent on
