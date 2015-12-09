@@ -12,22 +12,8 @@ NeoBundle 'Shougo/vimproc', {'build': {
             \ 'mac': 'make -f make_mac.mak',
             \ 'unix': 'make -f make_unix.mak'}}
 
-"" My plugins
-NeoBundle 'bombay.vim', {
-            \ 'base': $GITHUB_ROOT . '/dotfiles/config/vim/develop',
-            \ 'type': 'nosync'
-            \}
-
-NeoBundle 'neocomplete-kompl-vim', {
-            \ 'base': $GITHUB_ROOT . '/dotfiles/config/vim/develop/',
-            \ 'type': 'nosync'
-            \}
-
-"" A frok of 'rhsyd/vim-grammarous'
-NeoBundle 'vim-grammarous', {
-            \ 'base': $GITHUB_ROOT . '/dotfiles/config/vim/develop/',
-            \ 'type': 'nosync'
-            \}
+"" Colorscheme
+NeoBundle 'mitsuse/bombay.vim'
 
 "" Unite
 NeoBundle 'Shougo/unite.vim'
