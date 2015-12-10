@@ -34,3 +34,4 @@ brew install ghq
 brew install colordiff
 brew install android-sdk android-platform-tools
 brew install figlet
+brew install carthage
