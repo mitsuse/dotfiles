@@ -1,0 +1,56 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use utf8;
+
+use File::Spec;
+use File::Basename qw/dirname/;
+use lib (
+    File::Spec->catfile(dirname(__FILE__), qw/.. vendor lib/),
+    File::Spec->catfile(dirname(__FILE__), qw/.. lib/),
+);
+
+use Cwd qw/abs_path/;
+
+use CrystalBuild;
+use CrystalBuild::Utils;
+use CrystalBuild::Fetcher;
+
+sub main {
+    my $args        = CrystalBuild::Utils::parse_args(@ARGV);
+    my $github_repo = 'manastech/crystal';
+    my $cache_dir   = $ENV{CRYSTAL_BUILD_CACHE_PATH} // '.';
+
+    my $share_url  = 'https://raw.githubusercontent.com/pine613/crystal-build/master/share/crystal-build/';
+    my $cache_url  = $share_url.'/releases.json';
+    my $shards_url = $share_url.'/shards.json';
+
+    my $crenv = CrystalBuild->new(
+        prefix      => $args->{prefix},
+        cache       => $args->{cache},
+        cache_url   => $cache_url,
+        shards_url  => $shards_url,
+        cache_dir   => abs_path($cache_dir),
+        fetcher     => CrystalBuild::Fetcher->create(fetcher_type()),
+        github_repo => $github_repo,
+    );
+
+    if ($args->{definitions}) {
+        $crenv->show_definitions;
+    }
+
+    else {
+        $crenv->install($args->{version});
+    }
+}
+
+sub fetcher_type {
+    `which curl` ? 'curl' :
+    `which wget` ? 'wget' :
+        die 'Need curl or wget';
+}
+
+main unless caller;
+
+# vim: se et ts=4 sw=4 sts=4 ft=perl :
