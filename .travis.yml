@@ -1,0 +1,26 @@
+language: perl
+sudo: false
+
+perl:
+  - "5.22"
+  - "5.20"
+  - "5.18"
+  - "5.16"
+  - "5.14"
+  - "5.12"
+  - "5.10"
+
+before_script:
+  - git clone --depth 1 https://github.com/sstephenson/bats.git
+
+script:
+  - PATH="./bats/bin:$PATH" test/run
+  - prove -r xt
+  - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/|^vendor/" prove -r t
+
+after_success:
+  - cover -report codecov
+
+notifications:
+  slack:
+    secure: "dOCP7BGx1DmOeKVbrp15+TXT1h6ne2eDLyrBeUkbVF7Rdbh2G2nV67P4vOSNF6GbbM2SJlvpdxLYgAkHey2fLyNeKPai4zHv21xqpfGQSDCYeqj8FBm0sfnqBPulDvl9ZbXtgfByQ7Vnt2C7g03WGgr76AJPDj5cWQvDVISqEqRpHEozdOQF635OtvatOgcQAAOEkXIxFk1V3k1lnhA23JNJMca/ZvLdPXyZvxQbaX747wTLwCu4BztFkLVfJ1JK1kkuXd6A2hdKzjIJEofwU+djfdGifrxZUZ1ILuVpnHXWtZBDwl7GDlDgLAzjbI8FV0tON/Lep2m0/mGqC6HQ10lpFK3erdTJa3UmCMDslPvjuGP37raJYCbWxOU64i/oWfAr6wkgfCBNQgyCuhotWytcFVH/o7fn6JtdoEE1nb5xYaPGxLbhL5k2NmpBP+u4sg9ogRxucGr5OxAVp73ZJJskxDgiJ6ECghR6Cvvc8SBUUpwgXLWTRfwcpfDOco68VnETGacTABpY9oBtUnEeBky/KGYMzw1jnDuaGbJKKl/sJCR5KIDvQMUIfr6Og8+tgQFnaqJX7+Fxd0PQ85tjWt0GL40Y1bt5u9eJPgpo3wJBqMa9XOV3spTiptS8Np6ZmaUZcqSfqirLBXnL29xbf/gulySEp4nW7FvvbCJ0TuE="

@@ -1,0 +1,9 @@
+*.swp
+*.swo
+*~
+
+local
+cpanfile.snapshot
+
+t/tmp
+cover_db
