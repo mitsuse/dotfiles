@@ -60,6 +60,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'Quramy/vison'
 NeoBundle 'keith/swift.vim'
+NeoBundle 'rhysd/vim-crystal'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
