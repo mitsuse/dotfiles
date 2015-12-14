@@ -1,0 +1,3 @@
+export CRENV_ROOT=$GITHUB_ROOT/dotfiles/tools/crenv
+export PATH=$CRENV_ROOT/bin:$CRENV_ROOT/shims:$PATH
+eval "$(crenv init -)"

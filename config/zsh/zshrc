@@ -47,6 +47,7 @@ setopt auto_cd
 [ -f $HOME/.zshrc_python ] && source $HOME/.zshrc_python
 [ -f $HOME/.zshrc_ruby ] && source $HOME/.zshrc_ruby
 [ -f $HOME/.zshrc_node ] && source $HOME/.zshrc_node
+[ -f $HOME/.zshrc_crystal ] && source $HOME/.zshrc_crystal
 [ -f $HOME/.zshrc_brew ] && source $HOME/.zshrc_brew
 [ -f $HOME/.zshrc_osx ] && source $HOME/.zshrc_osx
 [ -f $HOME/.zshrc_arch ] && source $HOME/.zshrc_arch

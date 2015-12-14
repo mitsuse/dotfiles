@@ -25,6 +25,7 @@ config/zsh/zshrc_go:.zshrc_go
 config/zsh/zshrc_node:.zshrc_node
 config/zsh/zshrc_python:.zshrc_python
 config/zsh/zshrc_ruby:.zshrc_ruby
+config/zsh/zshrc_crystal:.zshrc_crystal
 config/zsh/zshrc_osx:.zshrc_osx
 config/zsh/zshrc_arch:.zshrc_arch
 config/zsh/zshrc_misc:.zshrc_misc
