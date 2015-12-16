@@ -11,3 +11,4 @@ brew cask install appcleaner
 brew cask install clamxav
 brew cask install slack
 brew cask install karabiner
+brew cask install gitter
