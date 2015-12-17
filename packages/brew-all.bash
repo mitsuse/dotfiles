@@ -4,6 +4,7 @@ brew tap homebrew/binary
 brew tap mitsuse/bullet
 brew tap b4b4r07/gomi
 brew tap tcnksm/license
+brew tap ishkawa/formulae
 
 brew install tmux zsh git
 brew install vim --with-luajit
@@ -35,3 +36,4 @@ brew install colordiff
 brew install android-sdk android-platform-tools
 brew install figlet
 brew install carthage
+brew install ls2xs
