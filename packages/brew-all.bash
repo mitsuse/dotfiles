@@ -39,3 +39,4 @@ brew install carthage
 brew install ls2xs
 brew install gibo
 brew install xctool
+brew install swiftlint
