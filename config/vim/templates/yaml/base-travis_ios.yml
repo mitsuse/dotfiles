@@ -6,15 +6,12 @@ xcode_scheme:
 xcode_sdk:
     - iphonesimulator9.1
 before_install:
-    - brew tap mitsuse/bullet
-    - brew install bullet-cmd
+    - brew update
+    - brew install swiftlint
     - brew install carthage
     - carthage bootstrap
-after_success:
-    - bullet send -t "Passed (${TRAVIS_BRANCH} at ${TRAVIS_REPO_SLUG})" -l "https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
-after_failure:
-    - bullet send -t "Failed (${TRAVIS_BRANCH} at ${TRAVIS_REPO_SLUG})" -l "https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
 notifications:
-    email:
-        on_success: never
-        on_failure: never
+    email: false
+    slack:
+        rooms:
+            secure:
