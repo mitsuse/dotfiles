@@ -1,3 +1,7 @@
+preexec() {
+    # TODO: Send the name of command to be executed.
+}
+
 zshaddhistory() {
     local line=${1%%$'\n'}
     local cmd=${line%% *}
