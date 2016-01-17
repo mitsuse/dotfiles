@@ -21,6 +21,7 @@ config/zsh/zshrc_env:.zshrc_env
 config/zsh/zshrc_tools:.zshrc_tools
 config/zsh/zshrc_brew:.zshrc_brew
 config/zsh/zshrc_command:.zshrc_command
+config/zsh/zshrc_hooks:.zshrc_hooks
 config/zsh/zshrc_go:.zshrc_go
 config/zsh/zshrc_node:.zshrc_node
 config/zsh/zshrc_python:.zshrc_python

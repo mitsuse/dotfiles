@@ -1,0 +1,10 @@
+zshaddhistory() {
+    local line=${1%%$'\n'}
+    local cmd=${line%% *}
+    [[\
+        "${cmd}" != "openssl" &&
+        "${cmd}" != "gm" &&
+        "${cmd}" != "rm" &&
+        "${cmd}" != "mv"
+    ]]
+}
