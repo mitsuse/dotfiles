@@ -61,6 +61,7 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'Quramy/vison'
 NeoBundle 'keith/swift.vim'
 NeoBundle 'rhysd/vim-crystal'
+NeoBundle 'jelera/vim-javascript-syntax'
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
