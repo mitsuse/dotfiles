@@ -1,4 +1,4 @@
-for tool_path in $(find ${HOME}/tools -maxdepth 1 ! -name '.*')
+for tool_path in $(find ${GITHUB_ROOT}/dotfiles/tools -maxdepth 1 ! -name '.*')
 do
     if [ -d $tool_path/bin ]; then
         export PATH=$tool_path/bin:$PATH
