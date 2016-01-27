@@ -1,9 +1,0 @@
-nnoremap ;; q:a
-nnoremap ;h :help<space>
-nnoremap ;w :w
-nnoremap ;q :q
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nmap <silent> <Esc><Esc> :nohlsearch<CR>

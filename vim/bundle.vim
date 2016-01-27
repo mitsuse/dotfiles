@@ -3,7 +3,7 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-    set runtimepath+=~/.vim/neobundle.vim/
+    set runtimepath+=~/tools/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))

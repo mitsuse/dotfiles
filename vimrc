@@ -1,9 +1,9 @@
 "" load each config file
-source $HOME/.bundle.vim
-source $HOME/.plugins.vim
-source $HOME/.commands.vim
-source $HOME/.keybinds.vim
-source $HOME/.type.vim
+source $HOME/.vim/bundle.vim
+source $HOME/.vim/plugins.vim
+source $HOME/.vim/commands.vim
+source $HOME/.vim/keybinds.vim
+source $HOME/.vim/type.vim
 
 "" Looks
 syntax on
