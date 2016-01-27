@@ -13,7 +13,7 @@ NeoBundle 'Shougo/vimproc', {'build': {
             \ 'unix': 'make -f make_unix.mak'}}
 
 "" Colorscheme
-NeoBundle 'mitsuse/bombay.vim'
+NeoBundle 'mitsuse/bombay.vim', 'develop'
 
 "" Unite
 NeoBundle 'Shougo/unite.vim'
