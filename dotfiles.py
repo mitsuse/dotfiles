@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # coding: utf-8
 
 
@@ -14,12 +14,12 @@ def install(script, context):
     error = clean(script, context)
     if error is not None:
         return error
-    print()
+    print('')
 
     error = link(script, context)
     if error is not None:
         return error
-    print()
+    print('')
 
     return None
 
