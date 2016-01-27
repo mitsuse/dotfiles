@@ -33,7 +33,7 @@ def link(script, context):
     def link_file(source_path, target_path):
         print("{} -> {}".format(source_path, target_path))
         try:
-            os.link(source_path, target_path)
+            os.symlink(source_path, target_path)
         except OSError as error:
             return error
         return None
