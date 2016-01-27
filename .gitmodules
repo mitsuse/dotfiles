@@ -10,9 +10,6 @@
 [submodule "tools/ndenv-plugins/node-build"]
 	path = tools/ndenv-plugins/node-build
 	url = https://github.com/riywo/node-build.git
-[submodule "tools/neobundle.vim"]
-	path = tools/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
 [submodule "tools/rbenv"]
 	path = tools/rbenv
 	url = https://github.com/sstephenson/rbenv.git
