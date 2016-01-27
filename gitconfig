@@ -3,7 +3,7 @@
 	email = tomoya@mitsuse.jp
 
 [core]
-	excludesFile = ~/.git/gitignore
+	excludesFile = ~/.gitignore
 	quotepath = false
 
 [alias]
