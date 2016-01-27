@@ -39,7 +39,6 @@ setopt auto_cd
 [ -f $HOME/.zshrc_node ] && source $HOME/.zshrc_node
 [ -f $HOME/.zshrc_brew ] && source $HOME/.zshrc_brew
 [ -f $HOME/.zshrc_osx ] && source $HOME/.zshrc_osx
-[ -f $HOME/.zshrc_arch ] && source $HOME/.zshrc_arch
 [ -f $HOME/.zshrc_misc ] && source $HOME/.zshrc_misc
 [ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
 
