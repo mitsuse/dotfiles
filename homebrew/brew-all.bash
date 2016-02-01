@@ -39,3 +39,4 @@ brew install gibo
 brew install xctool
 brew install swiftlint
 brew install sourcekitten
+brew install swagger-codegen
