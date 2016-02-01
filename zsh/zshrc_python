@@ -1,3 +1,0 @@
-export PYENV_ROOT=$GITHUB_ROOT/dotfiles/tools/pyenv
-export PATH=$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH
-eval "$(pyenv init -)"

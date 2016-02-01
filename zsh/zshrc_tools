@@ -4,3 +4,7 @@ do
         export PATH=$tool_path/bin:$PATH
     fi
 done
+
+# anyenv
+export ANYENV_ROOT=${GITHUB_ROOT}/dotfiles/tools/anyenv
+eval "$(anyenv init - zsh)"

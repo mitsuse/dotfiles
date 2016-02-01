@@ -1,3 +1,0 @@
-export RBENV_ROOT=$GITHUB_ROOT/dotfiles/tools/rbenv
-export PATH=$RBENV_ROOT/bin:$RBENV_ROOT/shims:$PATH
-eval "$(rbenv init -)"
