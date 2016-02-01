@@ -28,7 +28,6 @@ setopt auto_cd
 
 # load more specific config files
 # for CONFIG_PATH in $HOME/.zshrc_*
-[ -f $HOME/.zsh/zshrc_alias ] && source $HOME/.zsh/zshrc_alias
 [ -f $HOME/.zsh/zshrc_env ] && source $HOME/.zsh/zshrc_env
 [ -f $HOME/.zsh/zshrc_tools ] && source $HOME/.zsh/zshrc_tools
 [ -f $HOME/.zsh/zshrc_command ] && source $HOME/.zsh/zshrc_command
@@ -40,6 +39,7 @@ setopt auto_cd
 [ -f $HOME/.zsh/zshrc_brew ] && source $HOME/.zsh/zshrc_brew
 [ -f $HOME/.zsh/zshrc_osx ] && source $HOME/.zsh/zshrc_osx
 [ -f $HOME/.zsh/zshrc_misc ] && source $HOME/.zsh/zshrc_misc
+[ -f $HOME/.zsh/zshrc_alias ] && source $HOME/.zsh/zshrc_alias
 [ -f $HOME/.zsh/zshrc_other ] && source $HOME/.zsh/zshrc_other
 
 # use a simple prompt
