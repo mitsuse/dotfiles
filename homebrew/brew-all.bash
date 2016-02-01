@@ -3,7 +3,6 @@
 brew tap homebrew/binary
 brew tap mitsuse/bullet
 brew tap b4b4r07/gomi
-brew tap tcnksm/license
 brew tap ishkawa/formulae
 
 brew install tmux zsh git
@@ -29,11 +28,10 @@ brew install hub
 brew install pt
 brew install nkf
 brew install gnu-sed
-brew install license
 brew install graphviz
 brew install ghq
 brew install colordiff
-brew install android-sdk android-platform-tools
+brew install android-sdk
 brew install figlet
 brew install carthage
 brew install ls2xs
