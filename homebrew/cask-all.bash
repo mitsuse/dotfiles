@@ -10,3 +10,4 @@ brew cask install clamxav
 brew cask install slack
 brew cask install gitter
 brew cask install alcatraz
+brew cask install istat-menus
