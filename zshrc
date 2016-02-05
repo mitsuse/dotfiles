@@ -39,7 +39,7 @@ setopt auto_cd
 [ -f $HOME/.zsh/zshrc_misc ] && source $HOME/.zsh/zshrc_misc
 [ -f $HOME/.zsh/zshrc_alias ] && source $HOME/.zsh/zshrc_alias
 
-[ -f $HOME/.zsh_other ] && source $HOME/.zshrc_other
+[ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
 
 # use a simple prompt
 autoload -U add-zsh-hook
