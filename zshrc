@@ -38,7 +38,8 @@ setopt auto_cd
 [ -f $HOME/.zsh/zshrc_osx ] && source $HOME/.zsh/zshrc_osx
 [ -f $HOME/.zsh/zshrc_misc ] && source $HOME/.zsh/zshrc_misc
 [ -f $HOME/.zsh/zshrc_alias ] && source $HOME/.zsh/zshrc_alias
-[ -f $HOME/.zsh/zshrc_other ] && source $HOME/.zsh/zshrc_other
+
+[ -f $HOME/.zsh_other ] && source $HOME/.zshrc_other
 
 # use a simple prompt
 autoload -U add-zsh-hook
