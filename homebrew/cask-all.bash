@@ -11,3 +11,4 @@ brew cask install slack
 brew cask install gitter
 brew cask install alcatraz
 brew cask install istat-menus
+brew cask install google-drive
