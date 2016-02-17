@@ -4,6 +4,7 @@ brew tap homebrew/binary
 brew tap mitsuse/bullet
 brew tap b4b4r07/gomi
 brew tap ishkawa/formulae
+brew tap neovim/homebrew-neovim
 
 brew install tmux zsh git
 brew install vim --with-luajit
@@ -40,3 +41,4 @@ brew install xctool
 brew install swiftlint
 brew install sourcekitten
 brew install swagger-codegen
+brew install neovim
