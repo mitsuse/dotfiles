@@ -62,6 +62,11 @@ NeoBundle 'Quramy/vison'
 NeoBundle 'keith/swift.vim'
 NeoBundle 'rhysd/vim-crystal'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'davidhalter/jedi-vim'
+
+NeoBundle 'lambdalisue/vim-pyenv', {
+\   'depends': ['davidhalter/jedi-vim'],
+\}
 
 "" Others
 NeoBundle 'guns/xterm-color-table.vim'
