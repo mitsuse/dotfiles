@@ -7,7 +7,7 @@ brew tap ishkawa/formulae
 brew tap neovim/homebrew-neovim
 
 brew install tmux zsh git
-brew install vim --with-luajit
+brew install vim --with-luajit --with-python3
 brew install reattach-to-user-namespace
 brew install tree
 brew install direnv
