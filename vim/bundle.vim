@@ -26,6 +26,7 @@ NeoBundle 'ujihisa/unite-locate'
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tokorom/syntastic-swiftlint.vim'
 
 "" Completion
 NeoBundle 'Shougo/neocomplete.vim'
