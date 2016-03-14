@@ -13,3 +13,4 @@ brew cask install alcatraz
 brew cask install istat-menus
 brew cask install google-drive
 brew cask install kindle
+brew cask install dropbox
