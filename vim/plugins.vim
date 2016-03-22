@@ -19,6 +19,9 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
+"" autocomplete-swift (if neosnippet doesn't exsist)
+" autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
+
 let g:neosnippet#snippets_directory = [
             \   '$HOME/.vim/snippets',
             \]
