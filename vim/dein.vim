@@ -4,7 +4,7 @@ endif
 
 set runtimepath^=$GITHUB_ME/dotfiles/tools/dein.vim/
 
-call dein#begin(expand('~/.cache/dein'))
+call dein#begin(expand('~/.cache/vim/dein'))
 
 "" Import *Vim-common config.
 source $HOME/.config/_vim/dein.vim
