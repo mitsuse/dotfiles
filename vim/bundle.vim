@@ -22,33 +22,45 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'kannokanno/unite-dwm'
 NeoBundle 'ujihisa/unite-locate'
 
-"" Development
-NeoBundle 'vim-jp/vital.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-themis'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tokorom/syntastic-swiftlint.vim'
-
 "" Completion
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'ujihisa/neco-look'
-NeoBundle 'mattn/sonictemplate-vim'
 
 "" Edit
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'mattn/sonictemplate-vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'vim-jp/vital.vim'
+NeoBundle 'vim-scripts/matchit.zip'
 
 "" Window
 NeoBundle 'spolu/dwm.vim'
 
-"" File type
+
+"===============================================================================
+" Language Specific Plugins
+"===============================================================================
+
+"" English
+NeoBundle 'ujihisa/neco-look'
+
+"" Golang
 NeoBundle 'fatih/vim-go'
+
+"" Markdown
 NeoBundle 'tpope/vim-markdown'
+
+"" Swift
 NeoBundle 'keith/swift.vim'
+NeoBundle 'tokorom/syntastic-swiftlint.vim'
+
+"" Vim
+NeoBundle 'thinca/vim-themis'
+
 
 if filereadable(expand('$HOME/.bundle_dev.vim'))
     source $HOME/.bundle_dev.vim
