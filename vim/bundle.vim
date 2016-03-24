@@ -37,41 +37,18 @@ NeoBundle 'ujihisa/neco-look'
 NeoBundle 'mattn/sonictemplate-vim'
 
 "" Edit
-NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tomtom/tcomment_vim'
-" NeoBundle 'townk/vim-autoclose'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'kana/vim-fakeclip'
-" NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'haya14busa/incsearch.vim'
 
 "" Window
 NeoBundle 'spolu/dwm.vim'
-NeoBundle 'Shougo/vinarise.vim'
 
 "" File type
 NeoBundle 'fatih/vim-go'
-" NeoBundle 'mephux/vim-jsfmt'
-NeoBundle 'ahayman/vim-nodejs-complete'
 NeoBundle 'tpope/vim-markdown'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'Quramy/tsuquyomi'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'Quramy/vison'
 NeoBundle 'keith/swift.vim'
-NeoBundle 'rhysd/vim-crystal'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'davidhalter/jedi-vim'
-
-NeoBundle 'lambdalisue/vim-pyenv', {
-\   'depends': ['davidhalter/jedi-vim'],
-\}
-
-"" Others
-NeoBundle 'guns/xterm-color-table.vim'
 
 if filereadable(expand('$HOME/.bundle_dev.vim'))
     source $HOME/.bundle_dev.vim
