@@ -1,6 +1,5 @@
 "" load each config file
 source $HOME/.vim/dein.vim
-source $HOME/.vim/develop.vim
 source $HOME/.vim/plugins.vim
 source $HOME/.vim/commands.vim
 source $HOME/.vim/keybinds.vim
