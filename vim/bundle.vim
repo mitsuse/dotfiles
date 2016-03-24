@@ -62,10 +62,10 @@ NeoBundle 'tokorom/syntastic-swiftlint.vim'
 NeoBundle 'thinca/vim-themis'
 
 
-if filereadable(expand('$HOME/.bundle_dev.vim'))
-    source $HOME/.bundle_dev.vim
-endif
-
-call neobundle#end()
-
-filetype plugin indent on
+" if filereadable(expand('$HOME/.bundle_dev.vim'))
+"     source $HOME/.bundle_dev.vim
+" endif
+"
+" call neobundle#end()
+"
+" filetype plugin indent on

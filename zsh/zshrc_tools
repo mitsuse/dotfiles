@@ -1,4 +1,4 @@
-for tool_path in $(find ${GITHUB_ROOT}/dotfiles/tools -maxdepth 1 ! -name '.*')
+for tool_path in $(find ${GITHUB_ME}/dotfiles/tools -maxdepth 1 ! -name '.*')
 do
     if [ -d $tool_path/bin ]; then
         export PATH=$tool_path/bin:$PATH
@@ -6,5 +6,5 @@ do
 done
 
 # anyenv
-export ANYENV_ROOT=${GITHUB_ROOT}/dotfiles/tools/anyenv
+export ANYENV_ROOT=${GITHUB_ME}/dotfiles/tools/anyenv
 eval "$(anyenv init - zsh)"
