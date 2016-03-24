@@ -1,44 +1,40 @@
-"" NeoBundle
-set nocompatible
-filetype plugin indent off
-
-if has('vim_starting')
-    set runtimepath+=~/.tools/neobundle.vim/
+if &compatible
+    set nocompatible
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath^=$GITHUB_ME/dotfiles/tools/dein.vim/
 
-NeoBundle 'Shougo/vimproc', {'build': {
-            \ 'mac': 'make -f make_mac.mak',
-            \ 'unix': 'make -f make_unix.mak'}}
+call dein#begin(expand('~/.cache/dein'))
 
-"" Colorscheme
-NeoBundle 'mitsuse/bombay.vim', 'develop'
+
+"===============================================================================
+" General Plugins
+"===============================================================================
 
 "" Unite
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'kannokanno/unite-dwm'
-NeoBundle 'ujihisa/unite-locate'
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/unite-outline')
+call dein#add('Shougo/neomru.vim')
+call dein#add('kannokanno/unite-dwm')
+call dein#add('ujihisa/unite-locate')
 
 "" Completion
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
 
 "" Edit
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'mattn/sonictemplate-vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'vim-jp/vital.vim'
-NeoBundle 'vim-scripts/matchit.zip'
+call dein#add('haya14busa/incsearch.vim')
+call dein#add('kana/vim-fakeclip')
+call dein#add('mattn/sonictemplate-vim')
+call dein#add('scrooloose/syntastic')
+call dein#add('thinca/vim-quickrun')
+call dein#add('tomtom/tcomment_vim')
+call dein#add('vim-jp/vital.vim')
+call dein#add('vim-scripts/matchit.zip')
 
 "" Window
-NeoBundle 'spolu/dwm.vim'
+call dein#add('spolu/dwm.vim')
 
 
 "===============================================================================
@@ -46,26 +42,32 @@ NeoBundle 'spolu/dwm.vim'
 "===============================================================================
 
 "" English
-NeoBundle 'ujihisa/neco-look'
+call dein#add('ujihisa/neco-look')
 
 "" Golang
-NeoBundle 'fatih/vim-go'
+call dein#add('fatih/vim-go')
 
 "" Markdown
-NeoBundle 'tpope/vim-markdown'
+call dein#add('tpope/vim-markdown')
 
 "" Swift
-NeoBundle 'keith/swift.vim'
-NeoBundle 'tokorom/syntastic-swiftlint.vim'
+call dein#add('keith/swift.vim')
+call dein#add('tokorom/syntastic-swiftlint.vim')
 
 "" Vim
-NeoBundle 'thinca/vim-themis'
+call dein#add('thinca/vim-themis')
 
 
-" if filereadable(expand('$HOME/.bundle_dev.vim'))
-"     source $HOME/.bundle_dev.vim
-" endif
-"
-" call neobundle#end()
-"
-" filetype plugin indent on
+"===============================================================================
+" My Plugins
+"===============================================================================
+
+call dein#local($GITHUB_ME, {}, [
+\   'bombay.vim',
+\   'autocomplete-swift',
+\])
+
+
+call dein#end()
+
+filetype plugin indent on
