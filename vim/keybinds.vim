@@ -1,16 +1,3 @@
-"" standard vim commands
-nnoremap ;; q:a
-nnoremap ;h :help<space>
-nnoremap ;t :tabnew<space>
-nnoremap ;w :w
-nnoremap ;q :q
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap <C-a> :set spell!<CR>
-nmap <silent> <Esc><Esc> :nohlsearch<CR>
-
 "" unite
 nnoremap zn :UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap zp :UniteWithProjectDir -buffer-name=file file file/new<CR>
@@ -34,3 +21,6 @@ nnoremap <C-x>m :GoImport<space>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+"" Import *Vim-common config.
+source $HOME/.config/_vim/keybinds.vim

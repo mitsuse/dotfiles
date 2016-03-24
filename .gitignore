@@ -1,1 +1,5 @@
 /tools/homebrew/
+
+# Manage files under config/ based on whitelist.
+/config/*
+!/config/_vim/

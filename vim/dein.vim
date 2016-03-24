@@ -6,6 +6,9 @@ set runtimepath^=$GITHUB_ME/dotfiles/tools/dein.vim/
 
 call dein#begin(expand('~/.cache/dein'))
 
+"" Import *Vim-common config.
+source $HOME/.config/_vim/dein.vim
+
 
 "===============================================================================
 " General Plugins
