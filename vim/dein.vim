@@ -24,7 +24,10 @@ call dein#add('Shougo/neocomplete.vim')
 
 "" Vim
 call dein#add('thinca/vim-themis')
-call dein#add('vim-jp/vital.vim')
+
+call dein#local($GITHUB_ROOT . '/vim-jp', {}, [
+\   '/vital.vim',
+\])
 
 
 "===============================================================================
