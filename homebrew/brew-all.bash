@@ -41,4 +41,4 @@ brew install xctool
 brew install swiftlint
 brew install sourcekitten
 brew install swagger-codegen
-brew install neovim
+# brew install neovim

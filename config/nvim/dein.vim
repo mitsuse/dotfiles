@@ -17,6 +17,9 @@ source $HOME/.config/_vim/dein.vim
 "" Completion
 call dein#add('Shougo/deoplete.nvim')
 
+call dein#local($GITHUB_ME, {}, [
+\   'deoplete-swift',
+\])
 
 call dein#end()
 
