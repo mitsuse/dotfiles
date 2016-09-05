@@ -1,3 +1,5 @@
 export GHQROOT=$HOME/projects
 export GITHUB_ROOT=$GHQROOT/src/github.com
 export GITHUB_ME=$GITHUB_ROOT/$(whoami)
+
+[ -f $HOME/.zsh/zshrc_env_local ] && source $HOME/.zsh/zshrc_env_local
