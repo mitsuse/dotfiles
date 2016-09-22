@@ -18,7 +18,7 @@ source $HOME/.config/_vim/dein.vim
 call dein#add('Shougo/deoplete.nvim')
 
 call dein#local($GITHUB_ME, {}, [
-\   'deoplete-swift',
+\   'autocomplete-swift',
 \])
 
 call dein#end()
