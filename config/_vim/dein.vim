@@ -43,6 +43,7 @@ call dein#add('tpope/vim-markdown')
 "" Swift
 call dein#add('keith/swift.vim')
 call dein#add('tokorom/syntastic-swiftlint.vim')
+call dein#add('gfontenot/vim-xcode')
 
 
 "===============================================================================
