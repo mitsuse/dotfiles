@@ -21,3 +21,4 @@ brew install gibo
 brew install swiftlint
 brew install sourcekitten
 brew install neovim
+brew install ghq
