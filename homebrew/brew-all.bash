@@ -22,3 +22,4 @@ brew install swiftlint
 brew install sourcekitten
 brew install neovim
 brew install ghq
+brew install python3
