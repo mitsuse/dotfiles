@@ -1,0 +1,1 @@
+[ -f $HOME/python/main/bin/activate ] && source $HOME/python/main/bin/activate
