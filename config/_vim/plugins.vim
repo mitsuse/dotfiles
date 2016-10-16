@@ -19,12 +19,6 @@ let g:neosnippet#snippets_directory = [
 "" sonic-template
 let g:sonictemplate_vim_template_dir = '$HOME/.config/_vim/templates'
 
-"" vim-go
-let g:go_fmt_command = "goimports"
-let g:go_snippet_engine = ""
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-
 "" vim-markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
