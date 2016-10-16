@@ -16,8 +16,12 @@ source $HOME/.config/_vim/dein.vim
 
 "" Completion
 call dein#add('Shougo/deoplete.nvim')
+
+"" Go
+call dein#add('vim-jp/vim-go-extra')
 call dein#add('zchee/deoplete-go')
 
+"" Swift
 call dein#local($GITHUB_ME, {}, [
 \   'autocomplete-swift',
 \])
