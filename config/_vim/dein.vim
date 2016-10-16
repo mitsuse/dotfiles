@@ -34,9 +34,6 @@ call dein#add('spolu/dwm.vim')
 "" English
 call dein#add('ujihisa/neco-look')
 
-" Golang
-call dein#add('fatih/vim-go')
-
 "" Markdown
 call dein#add('tpope/vim-markdown')
 
