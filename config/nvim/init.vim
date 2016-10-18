@@ -6,3 +6,6 @@ source $HOME/.config/nvim/type.vim
 
 "" Import *Vim-common config.
 source $HOME/.config/_vim/init.vim
+
+"" Import environment-specific config.
+source $HOME/.config/nvim/local.vim
