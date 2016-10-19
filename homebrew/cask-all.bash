@@ -10,3 +10,4 @@ brew cask install slack
 brew cask install istat-menus
 brew cask install dropbox
 brew cask install pusher
+brew cask install hipchat
