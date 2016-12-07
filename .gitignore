@@ -8,6 +8,10 @@
 /config/nvim/.init.vim-rplugin~
 /config/nvim/local.vim
 
+# Use whitelist for mitmproxy.
+/mitmproxy/*
+!/mitmproxy/common.conf
+
 
 # Ignore local configurations.
 /zsh/zshrc_env_local
