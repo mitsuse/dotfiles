@@ -1,7 +1,6 @@
 "" Appearance
 syntax on
 colorscheme bombay
-set number
 set ruler
 set hlsearch
 set wildmenu
