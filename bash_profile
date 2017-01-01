@@ -1,3 +1,3 @@
-export PATH=$HOME/.tools/homebrew/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 eval "$(direnv hook bash)"
