@@ -35,3 +35,7 @@ set spelllang+=cjk
 
 "" Completion
 set completeopt=menuone
+
+if executable('swim')
+    autocmd InsertLeave * :call system('swim use com.apple.keyboardlayout.all')
+endif
