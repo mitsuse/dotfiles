@@ -18,7 +18,7 @@ bindkey "^n" history-beginning-search-forward-end
 
 # use vi-like keybinds and set the default editor to vim
 bindkey -v
-export EDITOR=vim
+export EDITOR=nvim
 
 export PATH=$HOME/bin:$HOME/dotfiles/bin:$PATH
 autoload -U compinit && compinit
