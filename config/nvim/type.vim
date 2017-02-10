@@ -14,3 +14,6 @@ autocmd! FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType scala setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+"" fastlane
+au BufNewFile,BufRead Fastfile set ft=ruby
