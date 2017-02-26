@@ -23,3 +23,4 @@ brew install sourcekitten
 brew install neovim
 brew install ghq
 brew install python3
+brew install bitrise
