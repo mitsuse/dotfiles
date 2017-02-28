@@ -21,6 +21,9 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('vim-jp/vim-go-extra')
 call dein#add('zchee/deoplete-go')
 
+"" TypeScript
+call dein#add('leafgarland/typescript-vim')
+
 "" Swift
 call dein#local($GITHUB_ME, {}, [
 \   'autocomplete-swift',
