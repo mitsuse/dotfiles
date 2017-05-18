@@ -9,3 +9,4 @@ brew cask install dropbox
 brew cask install pusher
 brew cask install hipchat
 brew cask install realm-browser
+brew cask install zeplin
