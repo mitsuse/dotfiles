@@ -34,6 +34,7 @@ setopt auto_cd
 [ -f $HOME/.zsh/zshrc_hooks ] && source $HOME/.zsh/zshrc_hooks
 [ -f $HOME/.zsh/zshrc_brew ] && source $HOME/.zsh/zshrc_brew
 [ -f $HOME/.zsh/zshrc_go ] && source $HOME/.zsh/zshrc_go
+[ -f $HOME/.zsh/zshrc_rust ] && source $HOME/.zsh/zshrc_rust
 [ -f $HOME/.zsh/zshrc_node ] && source $HOME/.zsh/zshrc_node
 [ -f $HOME/.zsh/zshrc_python ] && source $HOME/.zsh/zshrc_python
 [ -f $HOME/.zsh/zshrc_osx ] && source $HOME/.zsh/zshrc_osx

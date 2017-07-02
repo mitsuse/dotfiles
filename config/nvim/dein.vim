@@ -24,6 +24,9 @@ call dein#add('zchee/deoplete-go')
 "" TypeScript
 call dein#add('leafgarland/typescript-vim')
 
+"" Rust
+call dein#add('rust-lang/rust.vim')
+
 "" Swift
 call dein#local($GITHUB_ME, {}, [
 \   'autocomplete-swift',
