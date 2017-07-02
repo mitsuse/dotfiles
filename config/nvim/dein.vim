@@ -32,6 +32,9 @@ call dein#local($GITHUB_ME, {}, [
 \   'autocomplete-swift',
 \])
 
+"" TOML
+call dein#add('cespare/vim-toml')
+
 call dein#end()
 
 filetype plugin indent on
