@@ -26,6 +26,7 @@ call dein#add('leafgarland/typescript-vim')
 
 "" Rust
 call dein#add('rust-lang/rust.vim')
+call dein#add('racer-rust/vim-racer')
 
 "" Swift
 call dein#local($GITHUB_ME, {}, [
