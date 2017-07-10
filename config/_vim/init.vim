@@ -33,6 +33,10 @@ set nowritebackup
 "" Ignore CJK charactors on spell checking
 set spelllang+=cjk
 
+"" Workaround: https://github.com/neovim/neovim/issues/3094
+set ttimeout
+set ttimeoutlen=50
+
 "" Completion
 set completeopt=menuone
 
