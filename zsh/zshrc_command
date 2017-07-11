@@ -22,3 +22,5 @@ function fg_job() {
 }
 zle -N fg_job
 bindkey '^z' fg_job
+
+alias date8="date +%Y%m%d"
