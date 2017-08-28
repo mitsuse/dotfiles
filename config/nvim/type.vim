@@ -18,3 +18,4 @@ autocmd! FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 "" fastlane
 au BufNewFile,BufRead Fastfile set ft=ruby
 au BufNewFile,BufRead Podtfile set ft=ruby
+au BufNewFile,BufRead *.gyb set ft=python
