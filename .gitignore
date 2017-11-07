@@ -15,3 +15,5 @@
 
 # Ignore local configurations.
 /zsh/zshrc_env_local
+
+.idea/
