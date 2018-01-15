@@ -1,5 +1,6 @@
 #!/bin/bash
 
+brew tap go-swagger/go-swagger
 brew tap neovim/homebrew-neovim
 
 brew install tmux zsh git
@@ -24,3 +25,4 @@ brew install neovim
 brew install ghq
 brew install python3
 brew install bitrise
+brew install go-swagger
