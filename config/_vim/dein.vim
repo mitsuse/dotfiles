@@ -42,6 +42,9 @@ call dein#add('keith/swift.vim')
 call dein#add('tokorom/syntastic-swiftlint.vim')
 call dein#add('gfontenot/vim-xcode')
 
+"" OpenGL
+call dein#add('tikhomirov/vim-glsl')
+
 
 "===============================================================================
 " My Plugins
