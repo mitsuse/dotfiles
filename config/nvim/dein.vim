@@ -21,6 +21,11 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('vim-jp/vim-go-extra')
 call dein#add('zchee/deoplete-go')
 
+"" JavaScript
+call dein#add('carlitux/deoplete-ternjs', {
+\   'build': 'npm install -g tern',
+\})
+
 "" TypeScript
 call dein#add('leafgarland/typescript-vim')
 
