@@ -22,6 +22,9 @@ let g:sonictemplate_vim_template_dir = '$HOME/.config/_vim/templates'
 "" vim-markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+"" vim-prettier
+autocmd BufWrite *.js Prettier
+
 "" fakeclip
 set clipboard=unnamed
 
