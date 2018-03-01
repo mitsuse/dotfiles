@@ -42,6 +42,9 @@ call dein#add('keith/swift.vim')
 call dein#add('tokorom/syntastic-swiftlint.vim')
 call dein#add('gfontenot/vim-xcode')
 
+"" JavaScript
+call dein#add('prettier/vim-prettier')
+
 "" OpenGL
 call dein#add('tikhomirov/vim-glsl')
 
