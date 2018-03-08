@@ -26,3 +26,4 @@ brew install ghq
 brew install python3
 brew install bitrise
 brew install go-swagger
+brew install pipenv
