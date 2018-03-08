@@ -29,6 +29,9 @@ call dein#add('carlitux/deoplete-ternjs', {
 "" TypeScript
 call dein#add('leafgarland/typescript-vim')
 
+"" Python
+call dein#add('zchee/deoplete-jedi')
+
 "" Rust
 call dein#add('rust-lang/rust.vim')
 call dein#add('racer-rust/vim-racer')
