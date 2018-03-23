@@ -11,3 +11,7 @@ source $HOME/.config/_vim/plugins.vim
 "" vim-racer
 set hidden
 let g:racer_cmd = '/usr/local/bin/racer'
+
+
+"" ale
+call ale#Set('python_mypy_options', '--strict')

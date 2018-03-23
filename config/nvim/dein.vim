@@ -17,6 +17,9 @@ source $HOME/.config/_vim/dein.vim
 "" Completion
 call dein#add('Shougo/deoplete.nvim')
 
+"" Lint
+call dein#add('w0rp/ale')
+
 "" Go
 call dein#add('vim-jp/vim-go-extra')
 call dein#add('zchee/deoplete-go')
