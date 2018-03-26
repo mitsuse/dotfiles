@@ -1,12 +1,18 @@
+**Warning:  I will close the bug issue without the minimal init.vim and the reproduce ways.**
+
 # Problems summary
 
 
 ## Expected
 
 
-## Environment Information
+## Environment Information (Required!)
+
+ * dein.vim version(SHA1):
+
  * OS:
- * Vim version:
+
+ * Vim/neovim version:
 
 
 ## Provide a minimal .vimrc with less than 50 lines (Required!)
@@ -29,4 +35,4 @@ call dein#end()
 ## Screen shot (if possible)
 
 
-## Upload the log messages by `:redir` and `:message`
+## Upload the log messages by `:redir` and `:message` (if errored)

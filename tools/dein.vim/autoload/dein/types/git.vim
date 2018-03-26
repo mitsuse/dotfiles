@@ -5,7 +5,7 @@
 " License: MIT license
 "=============================================================================
 
-" Global options definition. "{{{
+" Global options definition.
 call dein#util#_set_default(
       \ 'g:dein#types#git#command_path', 'git')
 call dein#util#_set_default(
@@ -14,37 +14,68 @@ call dein#util#_set_default(
       \ 'g:dein#types#git#clone_depth', 0)
 call dein#util#_set_default(
       \ 'g:dein#types#git#pull_command', 'pull --ff --ff-only')
-"}}}
 
-function! dein#types#git#define() abort "{{{
+
+function! dein#types#git#define() abort
   return s:type
-endfunction"}}}
+endfunction
 
 let s:type = {
       \ 'name': 'git',
+      \ 'command': g:dein#types#git#command_path,
+      \ 'executable': executable(g:dein#types#git#command_path),
       \ }
 
-function! s:type.init(repo, option) abort "{{{
-  if a:repo =~# '^/\|^\a:[/\\]' && s:is_git_dir(a:repo.'/.git')
-    " Local repository.
-    return { 'uri': a:repo, 'type': 'git', 'local': 1 }
-  elseif isdirectory(a:repo)
+function! s:type.init(repo, options) abort
+  if !self.executable
     return {}
   endif
 
-  let protocol = matchstr(a:repo, '^.\{-}\ze://')
-  let name = substitute(a:repo[len(protocol):],
-        \   '^://[^/]*/', '', '')
-  let host = substitute(matchstr(a:repo[len(protocol):],
-        \ '^://\zs[^/]*\ze/'), ':.*$', '', '')
-  if host == ''
+  if a:repo =~# '^/\|^\a:[/\\]' && s:is_git_dir(a:repo.'/.git')
+    " Local repository.
+    return { 'type': 'git', 'local': 1 }
+  elseif a:repo =~#
+        \ '//\%(raw\|gist\)\.githubusercontent\.com/\|/archive/[^/]\+\.zip$'
+    return {}
+  endif
+
+  let uri = self.get_uri(a:repo, a:options)
+  if uri ==# ''
+    return {}
+  endif
+
+  let directory = substitute(uri, '\.git$', '', '')
+  let directory = substitute(directory, '^https:/\+\|^git@', '', '')
+  let directory = substitute(directory, ':', '/', 'g')
+
+  return { 'type': 'git',
+        \  'path': dein#util#_get_base_path().'/repos/'.directory }
+endfunction
+function! s:type.get_uri(repo, options) abort
+  if a:repo =~# '^/\|^\a:[/\\]'
+    return s:is_git_dir(a:repo.'/.git') ? a:repo : ''
+  endif
+
+  if a:repo =~# '^git@'
+    " Parse "git@host:name" pattern
+    let protocol = 'ssh'
+    let host = matchstr(a:repo[4:], '[^:]*')
+    let name = a:repo[4 + len(host) + 1 :]
+  else
+    let protocol = matchstr(a:repo, '^.\{-}\ze://')
+    let rest = a:repo[len(protocol):]
+    let name = substitute(rest, '^://[^/]*/', '', '')
+    let host = substitute(matchstr(rest, '^://\zs[^/]*\ze/'),
+          \ ':.*$', '', '')
+  endif
+  if host ==# ''
     let host = 'github.com'
   endif
 
-  if protocol == ''
+  if protocol ==# ''
         \ || a:repo =~# '\<\%(gh\|github\|bb\|bitbucket\):\S\+'
-        \ || has_key(a:option, 'type__protocol')
-    let protocol = get(a:option, 'type__protocol',
+        \ || has_key(a:options, 'type__protocol')
+    let protocol = get(a:options, 'type__protocol',
           \ g:dein#types#git#default_protocol)
   endif
 
@@ -52,131 +83,133 @@ function! s:type.init(repo, option) abort "{{{
     call dein#util#_error(
           \ printf('Repo: %s The protocol "%s" is unsecure and invalid.',
           \ a:repo, protocol))
-    return {}
+    return ''
   endif
 
-  if a:repo !~ '/'
-    " www.vim.org Vim scripts.
-    let uri  = (protocol ==# 'ssh') ?
-          \ 'git@github.com:vim-scripts/' :
-          \ protocol . '://github.com/vim-scripts/'
-    let uri .= name
+  if a:repo !~# '/'
+    call dein#util#_error(
+          \ printf('vim-scripts.org is deprecated.'
+          \ . ' You can use "vim-scripts/%s" instead.', a:repo))
+    return ''
   else
-    let uri = (protocol ==# 'ssh') ?
-          \ 'git@github.com:' . name :
+    let uri = (protocol ==# 'ssh' &&
+          \    (host ==# 'github.com' || host ==# 'bitbucket.com' ||
+          \     host ==# 'bitbucket.org')) ?
+          \ 'git@' . host . ':' . name :
           \ protocol . '://' . host . '/' . name
   endif
 
-  if uri !~ '\.git\s*$'
+  if uri !~# '\.git\s*$'
     " Add .git suffix.
     let uri .= '.git'
   endif
 
-  let directory = substitute(uri, '\.git$', '', '')
-  let directory = substitute(directory, '^https:/\+\|^git@', '', '')
-  let directory = substitute(directory, ':', '/', 'g')
+  return uri
+endfunction
 
-  return { 'uri': uri, 'type': 'git', 'directory': directory }
-endfunction"}}}
-
-function! s:type.get_sync_command(plugin) abort "{{{
-  let git = g:dein#types#git#command_path
-  if !executable(git)
-    return 'E: "git" command is not installed.'
-  endif
-
+function! s:type.get_sync_command(plugin) abort
   if !isdirectory(a:plugin.path)
-    let cmd = 'clone'
-    let cmd .= ' --recursive'
+    let commands = []
+
+    call add(commands, self.command)
+    call add(commands, 'clone')
+    call add(commands, '--recursive')
 
     let depth = get(a:plugin, 'type__depth',
           \ g:dein#types#git#clone_depth)
-    if depth > 0 && a:plugin.rev == '' && a:plugin.uri !~ '^git@'
-      let cmd .= ' --depth=' . depth
+    if depth > 0 && get(a:plugin, 'rev', '') ==# ''
+          \ && self.get_uri(a:plugin.repo, a:plugin) !~# '^git@'
+      call add(commands, '--depth=' . depth)
     endif
 
-    let cmd .= printf(' %s "%s"', a:plugin.uri, a:plugin.path)
+    call add(commands, self.get_uri(a:plugin.repo, a:plugin))
+    call add(commands, a:plugin.path)
+
+    return commands
   else
-    let shell = fnamemodify(split(&shell)[0], ':t')
-    let and = (!dein#util#_has_vimproc() && shell ==# 'fish') ?
-          \ '; and ' : ' && '
+    let git = self.command
 
     let cmd = g:dein#types#git#pull_command
+    let and = dein#util#_is_fish() ? '; and ' : ' && '
     let cmd .= and . git . ' submodule update --init --recursive'
+
+    return git . ' ' . cmd
+  endif
+endfunction
+
+function! s:type.get_revision_number_command(plugin) abort
+  if !self.executable
+    return []
   endif
 
-  return git . ' ' . cmd
-endfunction"}}}
-
-function! s:type.get_revision_number_command(plugin) abort "{{{
-  if !executable(g:dein#types#git#command_path)
-    return ''
-  endif
-
-  return g:dein#types#git#command_path .' rev-parse HEAD'
-endfunction"}}}
-function! s:type.get_revision_pretty_command(plugin) abort "{{{
-  if !executable(g:dein#types#git#command_path)
-    return ''
-  endif
-
-  return g:dein#types#git#command_path .
-        \ ' log -1 --pretty=format:"%h [%cr] %s"'
-endfunction"}}}
-function! s:type.get_commit_date_command(plugin) abort "{{{
-  if !executable(g:dein#types#git#command_path)
-    return ''
-  endif
-
-  return g:dein#types#git#command_path .
-        \ ' log -1 --pretty=format:"%ct"'
-endfunction"}}}
-function! s:type.get_log_command(plugin, new_rev, old_rev) abort "{{{
-  if !executable(g:dein#types#git#command_path)
-        \ || a:new_rev == '' || a:old_rev == ''
-    return ''
+  return [self.command, 'rev-parse', 'HEAD']
+endfunction
+function! s:type.get_log_command(plugin, new_rev, old_rev) abort
+  if !self.executable || a:new_rev ==# '' || a:old_rev ==# ''
+    return []
   endif
 
   " Note: If the a:old_rev is not the ancestor of two branchs. Then do not use
   " %s^.  use %s^ will show one commit message which already shown last time.
   let is_not_ancestor = dein#install#_system(
-        \ g:dein#types#git#command_path . ' merge-base '
+        \ self.command . ' merge-base '
         \ . a:old_rev . ' ' . a:new_rev) ==# a:old_rev
-  return printf(g:dein#types#git#command_path .
-        \ ' log %s%s..%s --graph --pretty=format:"%%h [%%cr] %%s"',
+  return printf(self.command .
+        \ ' log %s%s..%s --graph --no-show-signature' .
+        \ ' --pretty=format:"%%h [%%cr] %%s"',
         \ a:old_rev, (is_not_ancestor ? '' : '^'), a:new_rev)
-
-  " Test.
-  " return g:dein#types#git#command_path .
-  "      \ ' log HEAD^^^^..HEAD --graph --pretty=format:"%h [%cr] %s"'
-endfunction"}}}
-function! s:type.get_revision_lock_command(plugin) abort "{{{
-  if !executable(g:dein#types#git#command_path)
-    return ''
+endfunction
+function! s:type.get_revision_lock_command(plugin) abort
+  if !self.executable
+    return []
   endif
 
-  let rev = a:plugin.rev
-  if rev ==# 'release'
-    " Use latest released tag
-    let rev = get(split(dein#install#_system(g:dein#types#git#command_path
-          \ . ' tag --list --sort -version:refname'), "\n"), 0, '')
+  let rev = get(a:plugin, 'rev', '')
+  if rev =~# '*'
+    " Use the released tag (git 1.9.2 or above required)
+    let rev = get(split(dein#install#_system(
+          \ [self.command, 'tag', '--list',
+          \  escape(rev, '*'), '--sort', '-version:refname']),
+          \ "\n"), 0, '')
   endif
-  if rev == ''
+  if rev ==# ''
     " Fix detach HEAD.
-    let rev = 'master'
+    " Use symbolic-ref feature (git 1.8.7 or above required)
+    let rev = dein#install#_system([
+          \ self.command, 'symbolic-ref', '--short', 'HEAD'
+          \ ])
   endif
 
-  return g:dein#types#git#command_path . ' checkout ' . rev
-endfunction"}}}
-function! s:type.get_rollback_command(plugin, rev) abort "{{{
-  if !executable(g:dein#types#git#command_path)
-    return ''
+  return [self.command, 'checkout', rev]
+endfunction
+function! s:type.get_rollback_command(plugin, rev) abort
+  if !self.executable
+    return []
   endif
 
-  return g:dein#types#git#command_path . ' reset --hard ' . a:rev
-endfunction"}}}
+  return [self.command, 'reset', '--hard', a:rev]
+endfunction
+function! s:type.get_revision_remote_command(plugin) abort
+  if !self.executable
+    return []
+  endif
 
-function! s:is_git_dir(path) abort "{{{
+  let rev = get(a:plugin, 'rev', '')
+  if rev ==# ''
+    let rev = 'HEAD'
+  endif
+
+  return [self.command, 'ls-remote', 'origin', rev]
+endfunction
+function! s:type.get_fetch_remote_command(plugin) abort
+  if !self.executable
+    return []
+  endif
+
+  return [self.command, 'fetch', 'origin']
+endfunction
+
+function! s:is_git_dir(path) abort
   if isdirectory(a:path)
     let git_dir = a:path
   elseif filereadable(a:path)
@@ -189,11 +222,11 @@ function! s:is_git_dir(path) abort "{{{
       return 0
     endif
     let path = fnamemodify(a:path, ':h')
-    if fnamemodify(a:path, ':t') == ''
+    if fnamemodify(a:path, ':t') ==# ''
       " if there's no tail, the path probably ends in a directory separator
       let path = fnamemodify(path, ':h')
     endif
-    let git_dir = dein#util#join_paths(path, matches[1])
+    let git_dir = s:join_paths(path, matches[1])
     if !isdirectory(git_dir)
       return 0
     endif
@@ -222,7 +255,7 @@ function! s:is_git_dir(path) abort "{{{
   " Note: it may also be a symlink, which can point to a path that doesn't
   " necessarily exist yet.
   let head = s:join_paths(git_dir, 'HEAD')
-  if !filereadable(head) && getftype(head) != 'link'
+  if !filereadable(head) && getftype(head) !=# 'link'
     return 0
   endif
 
@@ -230,11 +263,11 @@ function! s:is_git_dir(path) abort "{{{
   " accept a directory that git itself won't, but I think we can safely ignore
   " those edge cases.
   return 1
-endfunction "}}}
+endfunction
 
 let s:is_windows = dein#util#_is_windows()
 
-function! s:join_paths(path1, path2) abort "{{{
+function! s:join_paths(path1, path2) abort
   " Joins two paths together, handling the case where the second path
   " is an absolute path.
   if s:is_absolute(a:path2)
@@ -250,16 +283,14 @@ function! s:join_paths(path1, path2) abort "{{{
     " diasble behavior like that, but I don't know how Vim deals with that.
     return a:path1 . '/' . a:path2
   endif
-endfunction "}}}
+endfunction
 
 if s:is_windows
-  function! s:is_absolute(path) abort "{{{
-    return a:path =~ '^[\\/]\|^\a:'
-  endfunction "}}}
+  function! s:is_absolute(path) abort
+    return a:path =~# '^[\\/]\|^\a:'
+  endfunction
 else
-  function! s:is_absolute(path) abort "{{{
-    return a:path =~ '^/'
-  endfunction "}}}
+  function! s:is_absolute(path) abort
+    return a:path =~# '^/'
+  endfunction
 endif
-
-" vim: foldmethod=marker
