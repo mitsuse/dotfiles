@@ -8,9 +8,12 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-# Installation directory
-PLUGIN_DIR=$1
-INSTALL_DIR="$PLUGIN_DIR/repos/github.com/Shougo/dein.vim"
+# Convert the installation directory to absolute path
+case $1 in
+  /*) PLUGIN_DIR=$1;;
+  *) PLUGIN_DIR=$PWD/$1;;
+esac
+INSTALL_DIR="${PLUGIN_DIR}/repos/github.com/Shougo/dein.vim"
 echo "Install to \"$INSTALL_DIR\"..."
 if [ -e "$INSTALL_DIR" ]; then
   echo "\"$INSTALL_DIR\" already exists!"
@@ -19,13 +22,10 @@ fi
 echo ""
 
 # check git command
-if type git; then
-  : # You have git command. No Problem.
-else
+type git || {
   echo 'Please install git or update your path to include the git executable!'
   exit 1
-fi
-
+}
 echo ""
 
 # make plugin dir and fetch dein
@@ -48,27 +48,31 @@ echo "Please add the following settings for dein to the top of your vimrc (Vim) 
     echo "endif"
     echo ""
     echo "\" Required:"
-    echo "set runtimepath^=$INSTALL_DIR"
+    echo "set runtimepath+=$INSTALL_DIR"
     echo ""
     echo "\" Required:"
-    echo "call dein#begin(expand('$PLUGIN_DIR'))"
+    echo "if dein#load_state('$PLUGIN_DIR')"
+    echo "  call dein#begin('$PLUGIN_DIR')"
     echo ""
-    echo "\" Let dein manage dein"
-    echo "\" Required:"
-    echo "call dein#add('Shougo/dein.vim')"
+    echo "  \" Let dein manage dein"
+    echo "  \" Required:"
+    echo "  call dein#add('$INSTALL_DIR')"
     echo ""
-    echo "\" Add or remove your plugins here:"
-    echo "call dein#add('Shougo/neosnippet.vim')"
-    echo "call dein#add('Shougo/neosnippet-snippets')"
+    echo "  \" Add or remove your plugins here:"
+    echo "  call dein#add('Shougo/neosnippet.vim')"
+    echo "  call dein#add('Shougo/neosnippet-snippets')"
     echo ""
-    echo "\" You can specify revision/branch/tag."
-    echo "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })"
+    echo "  \" You can specify revision/branch/tag."
+    echo "  call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })"
     echo ""
-    echo "\" Required:"
-    echo "call dein#end()"
+    echo "  \" Required:"
+    echo "  call dein#end()"
+    echo "  call dein#save_state()"
+    echo "endif"
     echo ""
     echo "\" Required:"
     echo "filetype plugin indent on"
+    echo "syntax enable"
     echo ""
     echo "\" If you want to install not installed plugins on startup."
     echo "\"if dein#check_install()"
