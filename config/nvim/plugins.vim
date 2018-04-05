@@ -24,5 +24,3 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \ 'python': ['yapf'],
 \ }
-
-call ale#Set('python_mypy_options', '--strict')
