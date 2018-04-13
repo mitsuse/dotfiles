@@ -17,3 +17,6 @@
 /zsh/zshrc_env_local
 
 .idea/
+
+/ptpython/*
+!/ptpython/config.py
