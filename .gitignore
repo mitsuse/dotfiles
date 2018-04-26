@@ -20,3 +20,6 @@
 
 /ptpython/*
 !/ptpython/config.py
+
+/matplotlib/*
+!/matplotlib/matplotlibrc
