@@ -23,4 +23,8 @@ function fg_job() {
 zle -N fg_job
 bindkey '^z' fg_job
 
+function ffmpeg_twitter() {
+    ffmpeg -i ${1} -b:v 25m -r 40 ${2}
+}
+
 alias date8="date +%Y%m%d"
