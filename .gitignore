@@ -5,6 +5,9 @@
 /config/*
 !/config/_vim/
 !/config/nvim/
+!/config/pgcli
+/config/pgcli/*
+!/config/pgcli/config
 /config/nvim/.init.vim-rplugin~
 /config/nvim/local.vim
 
