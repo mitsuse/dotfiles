@@ -6,6 +6,10 @@ function tmux_attach() {
 }
 alias t="tmux_attach"
 
+function pip_match() {
+    pip search $1 | grep "^$1 "
+}
+
 function cd_ghq() {
     local selected_path=$(ghq list -p | peco --query "$LBUFFER")
     if [ -n "${selected_path}" ]; then
