@@ -37,7 +37,10 @@ call dein#add('tomtom/tcomment_vim')
 call dein#add('vim-scripts/matchit.zip')
 
 "" Window
-call dein#add('spolu/dwm.vim')
+
+call dein#local($GITHUB_ME, {}, [
+\   'dwm.vim',
+\])
 
 "" Lint
 call dein#add('w0rp/ale')
