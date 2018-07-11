@@ -70,6 +70,8 @@ call dein#add('rust-lang/rust.vim')
 call dein#add('racer-rust/vim-racer')
 
 "" Swift
+call dein#add('keith/swift.vim')
+
 call dein#local($GITHUB_ME, {}, [
 \   'autocomplete-swift',
 \])
