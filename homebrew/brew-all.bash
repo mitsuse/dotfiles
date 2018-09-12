@@ -13,7 +13,6 @@ brew install go --with-cc-common
 brew install boot2docker
 brew install jq
 brew install caskroom/cask/brew-cask
-brew install hub
 brew install pt
 brew install nkf
 brew install gnu-sed
