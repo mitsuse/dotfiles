@@ -1,4 +1,5 @@
 /tools/homebrew/
+/tools/neovim/
 /tools/dein.vim/.netrwhist
 
 # Manage files under config/ based on whitelist.
