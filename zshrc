@@ -32,7 +32,7 @@ setopt auto_cd
 [ -f $HOME/.zsh/zshrc_tools ] && source $HOME/.zsh/zshrc_tools
 [ -f $HOME/.zsh/zshrc_command ] && source $HOME/.zsh/zshrc_command
 [ -f $HOME/.zsh/zshrc_hooks ] && source $HOME/.zsh/zshrc_hooks
-[ -f $HOME/.zsh/zshrc_brew ] && source $HOME/.zsh/zshrc_brew
+[ -f $HOME/.zsh/zshrc_brew -a $(uname) = 'Darwin' ] && source $HOME/.zsh/zshrc_brew
 [ -f $HOME/.zsh/zshrc_go ] && source $HOME/.zsh/zshrc_go
 [ -f $HOME/.zsh/zshrc_rust ] && source $HOME/.zsh/zshrc_rust
 [ -f $HOME/.zsh/zshrc_node ] && source $HOME/.zsh/zshrc_node
