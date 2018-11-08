@@ -27,3 +27,4 @@ brew install bitrise
 brew install go-swagger
 brew install pipenv
 brew install giter8
+brew install gradle
