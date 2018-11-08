@@ -3,7 +3,7 @@ if [[ $(uname) = "Darwin"  ]]; then
     export LC_ALL="en_US.UTF-8"
 
     ## Java
-    export JAVA_HOME=$(/usr/libexec/java_home -v "9")
+    export JAVA_HOME=$(/usr/libexec/java_home -v 11)
     export PATH=${JAVA_HOME}/bin:${PATH}
 
     ## Amazon Web Service
