@@ -1,6 +1,7 @@
 /tools/homebrew/
 /tools/neovim/
 /tools/dein.vim/.netrwhist
+/tools/google-cloud-sdk/
 
 # Manage files under config/ based on whitelist.
 /config/*
