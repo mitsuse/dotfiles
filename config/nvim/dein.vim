@@ -91,6 +91,9 @@ call dein#add('tikhomirov/vim-glsl')
 "" TOML
 call dein#add('cespare/vim-toml')
 
+"" Terraform
+call dein#add('hashivim/vim-terraform')
+
 call dein#end()
 
 filetype plugin indent on
