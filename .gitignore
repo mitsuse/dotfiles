@@ -7,6 +7,7 @@
 /config/*
 !/config/_vim/
 !/config/nvim/
+!/config/pip/
 !/config/pgcli
 /config/pgcli/*
 !/config/pgcli/config
