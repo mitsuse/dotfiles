@@ -28,3 +28,4 @@ brew install go-swagger
 brew install pipenv
 brew install giter8
 brew install gradle
+brew install terraform
