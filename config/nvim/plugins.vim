@@ -2,8 +2,8 @@
 let g:deoplete#enable_at_startup = 1
 
 "" deoplete-jedi
-let g:python_host_prog = $GITHUB_ME . '/dotfiles/tools/anyenv/envs/pyenv/shims/python2'
-let g:python3_host_prog = $GITHUB_ME . '/dotfiles/tools/anyenv/envs/pyenv/shims/python3'
+" let g:python_host_prog =
+" let g:python3_host_prog =
 
 "" unite
 let g:unite_enable_start_insert = 1
