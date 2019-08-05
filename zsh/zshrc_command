@@ -32,3 +32,7 @@ function ffmpeg_twitter() {
 }
 
 alias date8="date +%Y%m%d"
+
+function rmdd() {
+    rm -rf ~/Library/Developer/Xcode/DerivedData
+}
