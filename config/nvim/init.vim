@@ -48,7 +48,7 @@ set ttimeoutlen=50
 set completeopt=menuone
 
 if executable('swim')
-    autocmd InsertLeave * :call system('swim use com.apple.keyboardlayout.all')
+    autocmd InsertLeave * :call system('swim use com.apple.keylayout.ABC')
 endif
 
 "" Import environment-specific config.
