@@ -1,7 +1,0 @@
-root: ~/.gomi
-
-ignore_files:
-  - .DS_Store
-  - "*~"
-
-gomi_size: 8000000000 # 8 GB
