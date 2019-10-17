@@ -1,2 +1,14 @@
 {
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--select F"
+    ],
+    "files.watcherExclude": {
+        "**/__pychache/**": true,
+        "**/.mypy_cache/**": true,
+        "**/.venv/**": true
+    },
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true
 }
