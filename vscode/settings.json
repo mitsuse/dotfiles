@@ -10,5 +10,6 @@
         "**/.venv/**": true
     },
     "files.autoSave": "afterDelay",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "window.newWindowDimensions": "inherit"
 }
