@@ -1,36 +1,68 @@
-# load more specific config files
-# for CONFIG_PATH in $HOME/.zshrc_*
-[ -f $HOME/.zsh/zshrc_env ] && source $HOME/.zsh/zshrc_env
-[ -f $HOME/.zsh/zshrc_tools ] && source $HOME/.zsh/zshrc_tools
-[ -f $HOME/.zsh/zshrc_command ] && source $HOME/.zsh/zshrc_command
-[ -f $HOME/.zsh/zshrc_hooks ] && source $HOME/.zsh/zshrc_hooks
-[ -f $HOME/.zsh/zshrc_brew -a $(uname) = 'Darwin' ] && source $HOME/.zsh/zshrc_brew
-[ -f $HOME/.zsh/zshrc_go ] && source $HOME/.zsh/zshrc_go
-[ -f $HOME/.zsh/zshrc_rust ] && source $HOME/.zsh/zshrc_rust
-[ -f $HOME/.zsh/zshrc_node ] && source $HOME/.zsh/zshrc_node
-[ -f $HOME/.zsh/zshrc_python ] && source $HOME/.zsh/zshrc_python
-[ -f $HOME/.zsh/zshrc_osx ] && source $HOME/.zsh/zshrc_osx
-[ -f $HOME/.zsh/zshrc_misc ] && source $HOME/.zsh/zshrc_misc
-[ -f $HOME/.zsh/zshrc_alias ] && source $HOME/.zsh/zshrc_alias
+# Commands
+function tmux_attach() {
+    tmux attach 2>/dev/null
+    if [ "$?" -eq 1 ]; then 
+        tmux
+    fi
+}
+alias t="tmux_attach"
 
-[ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
-
-# use a simple prompt
-autoload -U add-zsh-hook
-autoload -U vcs_info
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' formats '(%s) [%b]'
-
-function update_vcs_info_msg() {
-    psvar=()
-    vcs_info   
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+function pip_match() {
+    pip search $1 | grep "^$1 "
 }
 
-add-zsh-hook precmd update_vcs_info_msg
+function cd_ghq() {
+    local selected_path=$(ghq list -p | peco --query "$LBUFFER")
+    if [ -n "${selected_path}" ]; then
+        BUFFER="cd ${selected_path}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N cd_ghq
+bindkey '^]' cd_ghq
 
-autoload -U colors && colors
-PROMPT="%B%{${fg[yellow]}%}%~ %1(v|%v|)%b
-%{${reset_color}%}[${USER}%B@${HOST}%b]$ "
+function fg_job() {
+    fg
+}
+zle -N fg_job
+bindkey '^z' fg_job
 
-eval "$(direnv hook zsh)"
+function ffmpeg_twitter() {
+    ffmpeg -i ${1} -b:v 25m -r 40 ${2}
+}
+
+alias date8="date +%Y%m%d"
+
+function rmdd() {
+    rm -rf ~/Library/Developer/Xcode/DerivedData
+}
+
+# Avoid adding some commands into the history.
+zshaddhistory() {
+    local line=${1%%$'\n'}
+    local cmd=${line%% *}
+    [[\
+        "${cmd}" != "openssl" &&
+        "${cmd}" != "gm" &&
+        "${cmd}" != "rm" &&
+        "${cmd}" != "mv"
+    ]]
+}
+
+case ${OSTYPE} in
+    darwin*)
+        source $HOME/.zshrc_osx
+        ;;
+    linux*)
+        source $HOME/.zshrc_linux
+        ;;
+esac
+
+alias sudo='sudo '
+alias mkdir='mkdir -p '
+alias gm='gomi'
+alias ptpython='ptpython --vi'
+alias diff='colordiff'
+
+[ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other

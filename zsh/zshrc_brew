@@ -1,5 +1,0 @@
-export HOMEBREW_NO_EMOJI=0
-
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-
-source $(brew --prefix carthage)/share/zsh/site-functions/_carthage
