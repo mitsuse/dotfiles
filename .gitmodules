@@ -1,6 +1,3 @@
-[submodule "tools/xcenv"]
-	path = tools/xcenv
-	url = https://github.com/xcenv/xcenv.git
 [submodule "tools/dein.vim"]
 	path = tools/dein.vim
 	url = git@github.com:Shougo/dein.vim
