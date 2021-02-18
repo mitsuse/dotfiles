@@ -1,5 +1,0 @@
-alias sudo='sudo '
-alias mkdir='mkdir -p '
-alias gm='gomi'
-alias ptpython='ptpython --vi'
-alias diff='colordiff'
