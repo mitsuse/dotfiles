@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+from typing import NamedTuple
+from typing import Sequence
+
+
+class Arguments(NamedTuple):
+    name: str
+    key: str
+
+
+def main() -> None:
+    import json
+    import sys
+
+    from urllib import request
+
+    arguments = parse(sys.argv[1:])
+
+    data = {'value1': arguments.name}
+    r = request.Request(
+        f'https://maker.ifttt.com/trigger/complete/with/key/{arguments.key}',
+        data= json.dumps(data).encode(),
+        headers={
+            'Content-Type': 'application/json',
+        },
+    )
+
+    request.urlopen(r)
+
+
+def parse(args: Sequence[str]) -> str:
+    import os
+
+    from argparse import ArgumentParser
+
+    parser = ArgumentParser()
+    parser.add_argument('--name', '-n', type=str, required=True)
+    parser.add_argument('--key', '-k', type=str, default=os.environ['IFTTT_WEBHOOK_KEY'])
+
+    result = parser.parse_args(args)
+
+    return Arguments(name=result.name, key=result.key)
+
+
+if __name__ == '__main__':
+    main()
