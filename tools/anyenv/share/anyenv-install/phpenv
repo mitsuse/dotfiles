@@ -1,2 +1,0 @@
-install_env "https://github.com/laprasdrum/phpenv.git" "master"
-install_plugin "php-build" "https://github.com/CHH/php-build.git" "master"
