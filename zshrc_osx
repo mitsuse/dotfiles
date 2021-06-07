@@ -2,6 +2,19 @@
 export LC_ALL="en_US.UTF-8"
 
 ## Java
+#export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+#export PATH=${JAVA_HOME}/bin:${PATH}
+
+## Homebrew
+export HOMEBREW_NO_EMOJI=0
+export PATH=/opt/homebrew/bin:${PATH}
+
+## Amazon Web Service
+export EC2_HOME=$(brew --prefix ec2-api-tools)/libexec
+## Locale
+export LC_ALL="en_US.UTF-8"
+
+## Java
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export PATH=${JAVA_HOME}/bin:${PATH}
 

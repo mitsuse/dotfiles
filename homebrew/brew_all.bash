@@ -15,6 +15,7 @@ brew install \
 if [ "$(uname)" == 'Darwin' ]; then
     brew tap homebrew/cask
 
+    # Core
     brew install \
         carthage \
         git \
@@ -22,11 +23,11 @@ if [ "$(uname)" == 'Darwin' ]; then
         swiftlint \
         zsh
 
-    brew cask install \
+    # Cask
+    brew install \
         gimp \
         google-chrome \
         google-cloud-sdk
         java \
-        pusher \
         slack
 fi
