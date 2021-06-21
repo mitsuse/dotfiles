@@ -50,49 +50,14 @@ call dein#add('w0rp/ale')
 " Language Specific Plugins
 "===============================================================================
 
-"" Go
-call dein#add('vim-jp/vim-go-extra')
-call dein#add('zchee/deoplete-go')
-
-"" JavaScript
-call dein#add('carlitux/deoplete-ternjs', {
-\   'build': 'npm install -g tern',
-\})
-
-"" TypeScript
-call dein#add('leafgarland/typescript-vim')
-
 "" Python
 call dein#add('zchee/deoplete-jedi')
-
-"" Rust
-call dein#add('rust-lang/rust.vim')
-call dein#add('racer-rust/vim-racer')
-
-"" Swift
-call dein#add('keith/swift.vim')
-
-call dein#local($GITHUB_ME, {}, [
-\   'autocomplete-swift',
-\])
 
 "" English
 call dein#add('ujihisa/neco-look')
 
 "" Markdown
 call dein#add('tpope/vim-markdown')
-
-"" JavaScript
-call dein#add('prettier/vim-prettier')
-
-"" OpenGL
-call dein#add('tikhomirov/vim-glsl')
-
-"" TOML
-call dein#add('cespare/vim-toml')
-
-"" Terraform
-call dein#add('hashivim/vim-terraform')
 
 call dein#end()
 
