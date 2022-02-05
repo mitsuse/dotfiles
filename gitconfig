@@ -7,7 +7,7 @@
 	quotepath = false
 
 [alias]
-    pm = !git branch --merged | grep -v '^\\*\\|develop\\|master' | xargs -n 1 -P 1 git branch -d
+    pm = !git branch --merged | grep -v '^\\*\\|develop\\|master|main' | xargs -n 1 -P 1 git branch -d
 
 [ghq]
     root = ~/projects/src
