@@ -11,3 +11,5 @@
 
 [ghq]
     root = ~/projects/src
+[init]
+	defaultBranch = main
