@@ -76,8 +76,6 @@ eval "$(rbenv init - zsh)"
 export HOMEBREW_NO_EMOJI=0
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 
-eval "$(direnv hook zsh)"
-
 
 # set the type to each environment variable.
 typeset -U path PATH
