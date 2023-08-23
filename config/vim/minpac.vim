@@ -15,7 +15,7 @@ call minpac#add('w0rp/ale')
 
 " Window
 call minpac#add('spolu/dwm.vim')
-"
+
 "" Unite
 call minpac#add('Shougo/unite.vim')
 call minpac#add('Shougo/unite-outline')
