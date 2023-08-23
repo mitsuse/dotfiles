@@ -7,3 +7,9 @@
 [submodule "tools/rbenv"]
 	path = tools/rbenv
 	url = https://github.com/rbenv/rbenv.git
+[submodule "tools/minpac"]
+	path = tools/minpac
+	url = https://github.com/k-takata/minpac
+[submodule "vim/pack/minpac/opt/minpac"]
+	path = vim/pack/minpac/opt/minpac
+	url = https://github.com/k-takata/minpac

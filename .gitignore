@@ -2,10 +2,11 @@
 /tools/neovim/
 /tools/dein.vim/.netrwhist
 /tools/google-cloud-sdk/
+/vim/pack/minpac/start
 
 # Manage files under config/ based on whitelist.
 /config/*
-!/config/_vim/
+!/config/vim/
 !/config/nvim/
 !/config/pip/
 !/config/pgcli
