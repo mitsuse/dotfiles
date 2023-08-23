@@ -1,7 +1,3 @@
-if &compatible
-    set
-endif
-
 packadd minpac
 
 call minpac#init()
