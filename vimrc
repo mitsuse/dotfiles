@@ -19,6 +19,11 @@ set smartindent
 set expandtab
 set shiftround
 
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.json setlocal tabstop=2 shiftwidth=2
+augroup END
+
 "" Search
 set history=100
 set ignorecase
