@@ -18,11 +18,8 @@ set autoindent
 set smartindent
 set expandtab
 set shiftround
-
-augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.json setlocal tabstop=2 shiftwidth=2
-augroup END
+set tabstop=2
+set shiftwidth=2
 
 "" Search
 set history=100
