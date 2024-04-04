@@ -70,6 +70,7 @@ done
 
 eval "$(pyenv init --path)"
 eval "$(rbenv init - zsh)"
+eval "$(nodenv init -)"
 
 
 # Tools installed by Homebrew
