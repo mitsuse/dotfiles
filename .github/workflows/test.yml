@@ -1,0 +1,15 @@
+name: Test
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      matrix:
+        os: [ubuntu, macOS]
+        native_ext: [with_native_ext, without_native_ext]
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci
+    - run: npm run test:${{ matrix.native_ext }}

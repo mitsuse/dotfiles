@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+# Summary: List installed Node versions
+# Usage: nodenv versions [--bare] [--skip-aliases]
+#
+# Lists all Node versions found in `$NODENV_ROOT/versions/*'.
+
+set -e
+[ -n "$NODENV_DEBUG" ] && set -x
+
+unset bare
+unset skip_aliases
+# Provide nodenv completions
+for arg; do
+  case "$arg" in
+  --complete )
+    echo --bare
+    echo --skip-aliases
+    exit ;;
+  --bare ) bare=1 ;;
+  --skip-aliases ) skip_aliases=1 ;;
+  * )
+    nodenv-help --usage versions >&2
+    exit 1
+    ;;
+  esac
+done
+
+versions_dir="${NODENV_ROOT}/versions"
+
+if ! enable -f "${BASH_SOURCE%/*}"/nodenv-realpath.dylib realpath 2>/dev/null; then
+  READLINK=$(type -p greadlink readlink 2>/dev/null | head -1)
+  if [ -z "$READLINK" ]; then
+    echo "nodenv: cannot find readlink - are you missing GNU coreutils?" >&2
+    exit 1
+  fi
+
+  resolve_link() {
+    $READLINK "$1"
+  }
+
+  realpath() {
+    local cwd="$PWD"
+    local path="$1"
+    local name
+
+    while [ -n "$path" ]; do
+      name="${path##*/}"
+      [ "$name" = "$path" ] || cd "${path%/*}"
+      path="$(resolve_link "$name" || true)"
+    done
+
+    echo "${PWD}/$name"
+    cd "$cwd"
+  }
+fi
+
+if [ -d "$versions_dir" ]; then
+  versions_dir="$(realpath "$versions_dir")"
+fi
+
+if [ -n "$bare" ]; then
+  hit_prefix=""
+  miss_prefix=""
+  current_version=""
+  include_system=""
+else
+  hit_prefix="* "
+  miss_prefix="  "
+  current_version="$(nodenv-version-name || true)"
+  include_system="1"
+fi
+
+num_versions=0
+
+print_version() {
+  if [ "$1" == "$current_version" ]; then
+    echo "${hit_prefix}$(nodenv-version 2>/dev/null)"
+  else
+    echo "${miss_prefix}$1"
+  fi
+  num_versions=$((num_versions + 1))
+}
+
+sort_versions() {
+  sed -E 'h; s/[~^<>=[:space:]]//g; s/^([[:digit:]])/a.\1/g; s/[+-]/./g; s/$/.0.0.0.0/; G; s/\n/ /' \
+  | LC_ALL=C sort -t. -k 1,1 -k 2,2n -k 3,3n -k 4,4n -k 5,5n \
+  | cut -d' ' -f 2-
+}
+
+# Include "system" in the non-bare output, if it exists
+if [ -n "$include_system" ] && NODENV_VERSION=system nodenv-which node >/dev/null 2>&1; then
+  print_version system
+fi
+
+while read -r version; do
+  print_version "$version"
+done < <(
+  {
+    shopt -s nullglob
+    for path in "$versions_dir"/* "$versions_dir"/lts/*; do
+      if [ -d "$path" ]; then
+        if [ ! -d "$path/bin" ]; then continue; fi
+
+        if [ -n "$skip_aliases" ] && [ -L "$path" ]; then
+          target="$(realpath "$path")"
+          [ "${target%/*}" != "$versions_dir" ] || continue
+        fi
+        echo "${path#"${versions_dir}/"}"
+      fi
+    done
+    shopt -u nullglob
+  } \
+  | sort_versions
+)
+
+if [ "$num_versions" -eq 0 ] && [ -n "$include_system" ]; then
+  echo "Warning: no Node detected on the system" >&2
+  exit 1
+fi

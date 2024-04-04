@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+#
+# Summary: Set or show the shell-specific Node version
+#
+# Usage: nodenv shell <version>
+#        nodenv shell -
+#        nodenv shell --unset
+#
+# Sets a shell-specific Node version by setting the `NODENV_VERSION'
+# environment variable in your shell. This version overrides local
+# application-specific versions and the global version.
+#
+# <version> should be a string matching a Node version known to nodenv.
+# The special version string `system' will use your default system Node.
+# Run `nodenv versions' for a list of available Node versions.
+#
+# When `-` is passed instead of the version string, the previously set
+# version will be restored. With `--unset`, the `NODENV_VERSION`
+# environment variable gets unset, restoring the environment to the
+# state before the first `nodenv shell` call.
+
+set -e
+[ -n "$NODENV_DEBUG" ] && set -x
+
+# Provide nodenv completions
+if [ "$1" = "--complete" ]; then
+  echo --unset
+  echo system
+  exec nodenv-versions --bare
+fi
+
+version="$1"
+shell="$(basename "${NODENV_SHELL:-$SHELL}")"
+
+if [ -z "$version" ]; then
+  if [ -z "$NODENV_VERSION" ]; then
+    echo "nodenv: no shell-specific version configured" >&2
+    exit 1
+  else
+    echo 'echo "$NODENV_VERSION"'
+    exit
+  fi
+fi
+
+if [ "$version" = "--unset" ]; then
+  case "$shell" in
+  fish )
+    echo 'set -gu NODENV_VERSION_OLD "$NODENV_VERSION"'
+    echo "set -e NODENV_VERSION"
+    ;;
+  * )
+    echo 'NODENV_VERSION_OLD="$NODENV_VERSION"'
+    echo "unset NODENV_VERSION"
+    ;;
+  esac
+  exit
+fi
+
+if [ "$version" = "-" ]; then
+  case "$shell" in
+  fish )
+    cat <<EOS
+if set -q NODENV_VERSION_OLD
+  if [ -n "\$NODENV_VERSION_OLD" ]
+    set NODENV_VERSION_OLD_ "\$NODENV_VERSION"
+    set -gx NODENV_VERSION "\$NODENV_VERSION_OLD"
+    set -gu NODENV_VERSION_OLD "\$NODENV_VERSION_OLD_"
+    set -e NODENV_VERSION_OLD_
+  else
+    set -gu NODENV_VERSION_OLD "\$NODENV_VERSION"
+    set -e NODENV_VERSION
+  end
+else
+  echo "nodenv: NODENV_VERSION_OLD is not set" >&2
+  false
+end
+EOS
+    ;;
+  * )
+    cat <<EOS
+if [ -n "\${NODENV_VERSION_OLD+x}" ]; then
+  if [ -n "\$NODENV_VERSION_OLD" ]; then
+    NODENV_VERSION_OLD_="\$NODENV_VERSION"
+    export NODENV_VERSION="\$NODENV_VERSION_OLD"
+    NODENV_VERSION_OLD="\$NODENV_VERSION_OLD_"
+    unset NODENV_VERSION_OLD_
+  else
+    NODENV_VERSION_OLD="\$NODENV_VERSION"
+    unset NODENV_VERSION
+  fi
+else
+  echo "nodenv: NODENV_VERSION_OLD is not set" >&2
+  false
+fi
+EOS
+    ;;
+  esac
+  exit
+fi
+
+# Make sure the specified version is installed.
+if nodenv-prefix "$version" >/dev/null; then
+  if [ "$version" != "$NODENV_VERSION" ]; then
+    case "$shell" in
+    fish )
+      echo 'set -gu NODENV_VERSION_OLD "$NODENV_VERSION"'
+      echo "set -gx NODENV_VERSION \"$version\""
+      ;;
+    * )
+      echo 'NODENV_VERSION_OLD="$NODENV_VERSION"'
+      echo "export NODENV_VERSION=\"$version\""
+      ;;
+    esac
+  fi
+else
+  echo "false"
+  exit 1
+fi
