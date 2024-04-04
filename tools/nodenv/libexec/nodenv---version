@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Summary: Display the version of nodenv
+#
+# Displays the version number of this nodenv release, including the
+# current revision from git, if available.
+#
+# The format of the git revision is:
+#   <version>+<num_commits>.<git_sha>
+# where `num_commits` is the number of commits since `version` was
+# tagged.
+
+set -e
+[ -n "$NODENV_DEBUG" ] && set -x
+
+cd "${BASH_SOURCE%/*}" 2>/dev/null
+
+version=1.4.1
+
+semver_compliant() {
+  sed -E 's/-([[:digit:]]+)-g([[:alnum:]]+)/+\1.\2/'
+}
+
+if git remote -v 2>/dev/null | grep -q nodenv; then
+  git_revision="$(git describe --tags HEAD 2>/dev/null | semver_compliant || true)"
+  git_revision="${git_revision#v}"
+fi
+
+echo "nodenv ${git_revision:-$version}"

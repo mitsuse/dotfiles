@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# Summary: List hook scripts for a given nodenv command
+# Usage: nodenv hooks <command>
+
+set -e
+[ -n "$NODENV_DEBUG" ] && set -x
+
+# Provide nodenv completions
+if [ "$1" = "--complete" ]; then
+  echo exec
+  echo rehash
+  echo version-name
+  echo version-origin
+  echo which
+  exit
+fi
+
+NODENV_COMMAND="$1"
+if [ -z "$NODENV_COMMAND" ]; then
+  nodenv-help --usage hooks >&2
+  exit 1
+fi
+
+if ! enable -f "${BASH_SOURCE%/*}"/nodenv-realpath.dylib realpath 2>/dev/null; then
+  READLINK=$(type -p greadlink readlink 2>/dev/null | head -1)
+  if [ -z "$READLINK" ]; then
+    echo "nodenv: cannot find readlink - are you missing GNU coreutils?" >&2
+    exit 1
+  fi
+
+  resolve_link() {
+    $READLINK "$1"
+  }
+
+  realpath() {
+    local cwd="$PWD"
+    local path="$1"
+    local name
+
+    while [ -n "$path" ]; do
+      name="${path##*/}"
+      [ "$name" = "$path" ] || cd "${path%/*}"
+      path="$(resolve_link "$name" || true)"
+    done
+
+    echo "${PWD}/$name"
+    cd "$cwd"
+  }
+fi
+
+IFS=: hook_paths=($NODENV_HOOK_PATH)
+
+shopt -s nullglob
+for path in "${hook_paths[@]}"; do
+  for script in "$path/$NODENV_COMMAND"/*.bash; do
+    realpath "$script"
+  done
+done
+shopt -u nullglob

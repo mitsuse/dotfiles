@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+#
+# Summary: Display the full path to an executable
+#
+# Usage: nodenv which <command>
+#
+# Displays the full path to the executable that nodenv will invoke when
+# you run the given command.
+
+set -e
+[ -n "$NODENV_DEBUG" ] && set -x
+
+# Provide nodenv completions
+if [ "$1" = "--complete" ]; then
+  exec nodenv-shims --short
+fi
+
+remove_from_path() {
+  local path_to_remove="$1"
+  local path_before
+  local result=":${PATH//\~/$HOME}:"
+  while [ "$path_before" != "$result" ]; do
+    path_before="$result"
+    result="${result//:$path_to_remove:/:}"
+  done
+  result="${result%:}"
+  echo "${result#:}"
+}
+
+NODENV_COMMAND="$1"
+
+if [ -z "$NODENV_COMMAND" ]; then
+  nodenv-help --usage which >&2
+  exit 1
+fi
+
+NODENV_VERSION="${NODENV_VERSION:-$(nodenv-version-name)}"
+
+if [ "$NODENV_VERSION" = "system" ]; then
+  PATH="$(remove_from_path "${NODENV_ROOT}/shims")" \
+  NODENV_COMMAND_PATH="$(command -v "$NODENV_COMMAND" || true)"
+else
+  NODENV_COMMAND_PATH="${NODENV_ROOT}/versions/${NODENV_VERSION}/bin/${NODENV_COMMAND}"
+fi
+
+OLDIFS="$IFS"
+IFS=$'\n' scripts=(`nodenv-hooks which`)
+IFS="$OLDIFS"
+for script in "${scripts[@]}"; do
+  source "$script"
+done
+
+if [ -x "$NODENV_COMMAND_PATH" ]; then
+  echo "$NODENV_COMMAND_PATH"
+elif [ "$NODENV_VERSION" != "system" ] && [ ! -d "${NODENV_ROOT}/versions/${NODENV_VERSION}" ]; then
+  echo "nodenv: version \`$NODENV_VERSION' is not installed (set by $(nodenv-version-origin))" >&2
+  exit 1
+else
+  echo "nodenv: $NODENV_COMMAND: command not found" >&2
+
+  versions="$(nodenv-whence "$NODENV_COMMAND" || true)"
+  if [ -n "$versions" ]; then
+    { echo
+      echo "The \`$1' command exists in these Node versions:"
+      echo "$versions" | sed 's/^/  /g'
+      echo
+    } >&2
+  fi
+
+  exit 127
+fi
