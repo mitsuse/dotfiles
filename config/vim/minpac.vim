@@ -7,7 +7,7 @@ call minpac#add('mitsuse/bombay.vim', {'dir': $GITHUB_ME})
 " Editing
 call minpac#add('haya14busa/incsearch.vim')
 call minpac#add('tomtom/tcomment_vim')
-call minpac#add('w0rp/ale')
+call minpac#add('dense-analysis/ale')
 
 " Window
 call minpac#add('spolu/dwm.vim')
