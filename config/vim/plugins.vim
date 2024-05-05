@@ -14,3 +14,6 @@ let g:ale_fixers = {
 \ 'python': ['ruff_format', 'isort'],
 \ 'typescript': ['eslint', 'prettier'],
 \ }
+
+"" lsp
+let g:lsp_diagnostics_echo_cursor = 1
