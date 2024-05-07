@@ -22,6 +22,7 @@ if [ "$(uname)" == 'Darwin' ]; then
         gnu-sed \
         swiftlint \
         libpq \
+        mkcert \
         zsh
 
     # Cask
