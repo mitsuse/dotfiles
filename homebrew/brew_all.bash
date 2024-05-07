@@ -21,6 +21,7 @@ if [ "$(uname)" == 'Darwin' ]; then
         git \
         gnu-sed \
         swiftlint \
+        libpq \
         zsh
 
     # Cask
