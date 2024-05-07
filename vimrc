@@ -12,6 +12,7 @@ set wildmenu
 set cursorline
 set list
 set listchars=tab:>.,trail:･,eol:↲,nbsp:%
+set re=0
 
 "" Indentation
 set autoindent
