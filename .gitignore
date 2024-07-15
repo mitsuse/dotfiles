@@ -32,3 +32,5 @@
 
 /matplotlib/*
 !/matplotlib/matplotlibrc
+
+/vim/.netrwhist

@@ -24,4 +24,7 @@ call minpac#add('prabirshrestha/asyncomplete-lsp.vim')
 call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('mattn/vim-lsp-settings')
 
+"" Syntax Highlight
+call minpac#add('MaxMEllon/vim-jsx-pretty')
+
 filetype plugin indent on
