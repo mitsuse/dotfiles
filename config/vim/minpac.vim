@@ -26,5 +26,6 @@ call minpac#add('mattn/vim-lsp-settings')
 
 "" Syntax Highlight
 call minpac#add('MaxMEllon/vim-jsx-pretty')
+call minpac#add('joerdav/templ.vim')
 
 filetype plugin indent on
