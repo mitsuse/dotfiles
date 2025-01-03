@@ -150,3 +150,7 @@ alias ptpython='ptpython --vi'
 alias diff='colordiff'
 
 [ -f $HOME/.zshrc_other ] && source $HOME/.zshrc_other
+
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
+[ -f $HOME/.deno/env ] && source $HOME/.deno/env
